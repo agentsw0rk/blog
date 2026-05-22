@@ -23,9 +23,28 @@ export default function eleventyConfig(config) {
     return words.length;
   });
 
-  config.addFilter("head", (items, count) => items.slice(0, count));
+  config.addFilter("head", (items, count) =>
+    Array.isArray(items) ? items.slice(0, count) : []
+  );
 
-  config.addFilter("absoluteUrl", (url, siteUrl) => new URL(url, siteUrl).href);
+  config.addFilter("absoluteUrl", (url, siteUrl) => {
+    const site = new URL(siteUrl);
+    const value = String(url);
+
+    if (/^[a-z][a-z\d+.-]*:/i.test(value)) {
+      return value;
+    }
+
+    if (value.startsWith("/")) {
+      const basePath = site.pathname.endsWith("/")
+        ? site.pathname
+        : `${site.pathname}/`;
+
+      return new URL(`${basePath}${value.slice(1)}`, site).href;
+    }
+
+    return new URL(value, site).href;
+  });
 
   config.addCollection("posts", (collectionApi) =>
     collectionApi
@@ -37,7 +56,9 @@ export default function eleventyConfig(config) {
   config.addCollection("tagList", (collectionApi) => {
     const tags = new Set();
 
-    for (const item of collectionApi.getFilteredByGlob("src/posts/*.md")) {
+    for (const item of collectionApi
+      .getFilteredByGlob("src/posts/*.md")
+      .filter((post) => !post.data.draft)) {
       for (const tag of item.data.tags || []) {
         if (tag !== "post") {
           tags.add(tag);
