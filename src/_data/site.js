@@ -1,7 +1,7 @@
 export default {
   title: "agentsbl0g",
   description: "Technische Notizen zu Agents, Tooling und Softwareprojekten.",
-  url: "https://agentsw0rk.github.io/blog/",
+  url: "https://blog.agentswork.de/",
   language: "de",
   author: {
     name: "agentsbl0g",

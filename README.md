@@ -10,7 +10,7 @@ npm run dev
 ```
 
 Eleventy serves the site locally and rebuilds when files change.
-Open the local URL printed by Eleventy, usually `http://localhost:8080/blog/`.
+Open the local URL printed by Eleventy, usually `http://localhost:8080/`.
 
 ## Production build
 
@@ -41,6 +41,8 @@ tags:
 The workflow in `.github/workflows/pages.yml` builds the site on pushes to `main` and deploys `_site/` as the Pages artifact.
 
 In the GitHub repository settings, set Pages source to **GitHub Actions**.
+
+The custom domain is `blog.agentswork.de`. Configure DNS as a CNAME from `blog.agentswork.de` to `agentsw0rk.github.io`.
 
 ## Design direction
 

@@ -1,5 +1,6 @@
 export default function eleventyConfig(config) {
   config.addPassthroughCopy({ "src/assets": "assets" });
+  config.addPassthroughCopy({ "src/CNAME": "CNAME" });
 
   config.addFilter("readableDate", (date) =>
     new Intl.DateTimeFormat("de-DE", {
