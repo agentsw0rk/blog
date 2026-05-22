@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="/" aria-label="{{ site.title }} Startseite">
+      <span class="brand-mark">a0</span>
+      <span class="brand-name">
+        <strong>{{ site.title }}</strong>
+        <span>agent notes / build logs</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}" data-nav-link>{{ item.label }}</a>
+      {% endfor %}
+      <a class="nav-github" href="{{ site.github }}">GitHub</a>
+    </nav>
+  </div>
+</header>

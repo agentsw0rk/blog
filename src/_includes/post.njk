@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+<article class="article shell">
+  <header class="article-header">
+    <p class="eyebrow">Log Entry</p>
+    <h1>{{ title }}</h1>
+    <p class="article-description">{{ description }}</p>
+    <div class="article-meta">
+      <time datetime="{{ date | htmlDate }}">{{ date | readableDate }}</time>
+      <span>{{ content | wordCount }} Wörter</span>
+    </div>
+    <div class="tag-row">
+      {% for tag in tags %}
+        {% if tag != "post" %}
+          <a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </header>
+  <div class="article-body">
+    {{ content | safe }}
+  </div>
+</article>
