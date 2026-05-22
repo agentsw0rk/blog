@@ -13,6 +13,25 @@ export default function eleventyConfig(config) {
 
   config.addFilter("dateToRfc822", (date) => date.toUTCString());
 
+  config.addFilter("url", (url, siteUrl) => {
+    const value = String(url);
+
+    if (/^[a-z][a-z\d+.-]*:/i.test(value) || value.startsWith("//")) {
+      return value;
+    }
+
+    if (!value.startsWith("/")) {
+      return value;
+    }
+
+    const site = new URL(siteUrl);
+    const basePath = site.pathname.endsWith("/")
+      ? site.pathname
+      : `${site.pathname}/`;
+
+    return `${basePath}${value.slice(1)}`;
+  });
+
   config.addFilter("wordCount", (content) => {
     const words = String(content)
       .replace(/<[^>]*>/g, " ")

@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="shell nav">
-    <a class="brand" href="/" aria-label="{{ site.title }} Startseite">
+    <a class="brand" href="{{ '/' | url(site.url) }}" aria-label="{{ site.title }} Startseite">
       <span class="brand-mark">a0</span>
       <span class="brand-name">
         <strong>{{ site.title }}</strong>
@@ -9,7 +9,7 @@
     </a>
     <nav class="nav-links" aria-label="Hauptnavigation">
       {% for item in site.nav %}
-        <a href="{{ item.url }}" data-nav-link>{{ item.label }}</a>
+        <a href="{{ item.url | url(site.url) }}" data-nav-link>{{ item.label }}</a>
       {% endfor %}
       <a class="nav-github" href="{{ site.github }}">GitHub</a>
     </nav>
