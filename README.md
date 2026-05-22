@@ -41,6 +41,6 @@ The workflow in `.github/workflows/pages.yml` builds the site on pushes to `main
 
 In the GitHub repository settings, set Pages source to **GitHub Actions**.
 
-## Design reference
+## Design direction
 
-The top-level `index.html` was provided as the visual reference for the Technical Console direction. The production source lives in `src/`.
+The initial design reference for this setup informed the Technical Console direction. The production source lives in `src/`.
