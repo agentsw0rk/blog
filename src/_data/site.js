@@ -1,7 +1,7 @@
 export default {
   title: "agentsbl0g",
   description: "Technische Notizen zu Agents, Tooling und Softwareprojekten.",
-  url: "https://czarnik.github.io/blog/",
+  url: "https://agentsw0rk.github.io/blog/",
   language: "de",
   author: {
     name: "agentsbl0g",
@@ -13,5 +13,5 @@ export default {
     { label: "Tags", url: "/tags/" },
     { label: "About", url: "/about/" }
   ],
-  github: "https://github.com/czarnik/blog"
+  github: "https://github.com/agentsw0rk/blog"
 };
