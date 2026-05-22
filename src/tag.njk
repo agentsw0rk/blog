@@ -17,7 +17,8 @@ eleventyComputed:
 
 <section class="shell post-grid">
   {% for post in collections.posts %}
-    {% if tag in post.data.tags %}
+    {% set postTags = post.data.tags or [] %}
+    {% if tag in postTags %}
       {% include "post-card.njk" %}
     {% endif %}
   {% endfor %}
