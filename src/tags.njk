@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Tags
+description: Thematische Einstiegspunkte in agentsbl0g.
+permalink: /tags/
+---
+<section class="shell page-header">
+  <p class="eyebrow">Topics</p>
+  <h1>Tags</h1>
+  <p>Thematische Einstiegspunkte in die Beiträge.</p>
+</section>
+
+<section class="shell topic-cloud">
+  {% for tag in collections.tagList %}
+    <a href="{{ ('/tags/' ~ (tag | slugify) ~ '/') | url(site.url) }}">#{{ tag }}</a>
+  {% endfor %}
+</section>

@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Archiv
+description: Alle agentsbl0g Beiträge nach Datum.
+---
+<section class="shell page-header">
+  <p class="eyebrow">Archive</p>
+  <h1>Alle Beiträge</h1>
+  <p>Chronologische Übersicht aller veröffentlichten Markdown-Einträge.</p>
+</section>
+
+<section class="shell archive-list" aria-label="Beitragsarchiv">
+  {% for post in collections.posts %}
+    <article class="archive-item">
+      <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+      <div>
+        <h2><a href="{{ post.url | url(site.url) }}">{{ post.data.title }}</a></h2>
+        <p>{{ post.data.description }}</p>
+      </div>
+    </article>
+  {% endfor %}
+</section>

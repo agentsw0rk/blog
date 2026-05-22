@@ -1,0 +1,24 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag | slugify }}/"
+eleventyComputed:
+  title: "#{{ tag }}"
+  description: "Beiträge mit dem Tag {{ tag }}."
+---
+<section class="shell page-header">
+  <p class="eyebrow">Topic</p>
+  <h1>#{{ tag }}</h1>
+  <p>Beiträge mit dem Tag {{ tag }}.</p>
+</section>
+
+<section class="shell post-grid">
+  {% for post in collections.posts %}
+    {% if tag in post.data.tags %}
+      {% include "post-card.njk" %}
+    {% endif %}
+  {% endfor %}
+</section>

@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: Start
+description: Technische Notizen zu Agents, Tooling und Softwareprojekten.
+---
+{% set latest = collections.posts[0] %}
+<section class="hero shell">
+  <div class="hero-copy">
+    <p class="eyebrow">Markdown / Eleventy / GitHub Pages</p>
+    <h1>agentsbl0g dokumentiert Agent-Experimente und Build-Notizen.</h1>
+    <p>Ein dunkler Technical-Console-Blog für kurze, belastbare Notizen aus Projekten, Tooling und Softwareentwicklung.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="{{ '/archive/' | url(site.url) }}">Alle Beiträge</a>
+      <a class="button secondary" href="{{ '/feed.xml' | url(site.url) }}">RSS Feed</a>
+    </div>
+  </div>
+  <aside class="status-panel" aria-label="Site status">
+    <span>source</span>
+    <strong>Markdown posts</strong>
+    <span>build</span>
+    <strong>Eleventy static output</strong>
+    <span>deploy</span>
+    <strong>GitHub Pages Actions</strong>
+  </aside>
+</section>
+
+{% if latest %}
+<section class="featured shell" aria-labelledby="featured-title">
+  <div>
+    <p class="eyebrow">Latest</p>
+    <h2 id="featured-title"><a href="{{ latest.url | url(site.url) }}">{{ latest.data.title }}</a></h2>
+    <p>{{ latest.data.description }}</p>
+  </div>
+  <time datetime="{{ latest.date | htmlDate }}">{{ latest.date | readableDate }}</time>
+</section>
+{% endif %}
+
+<section class="shell section" aria-labelledby="recent-title">
+  <div class="section-heading">
+    <h2 id="recent-title">Aktuelle Einträge</h2>
+    <a href="{{ '/archive/' | url(site.url) }}">Archiv öffnen</a>
+  </div>
+  <div class="post-grid">
+    {% for post in collections.posts | head(3) %}
+      {% include "post-card.njk" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shell section" aria-labelledby="topics-title">
+  <div class="section-heading">
+    <h2 id="topics-title">Topics</h2>
+    <a href="{{ '/tags/' | url(site.url) }}">Alle Tags</a>
+  </div>
+  <div class="topic-cloud">
+    {% for tag in collections.tagList %}
+      <a href="{{ ('/tags/' ~ (tag | slugify) ~ '/') | url(site.url) }}">#{{ tag }}</a>
+    {% endfor %}
+  </div>
+</section>

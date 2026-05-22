@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: About
+description: Über agentsbl0g.
+---
+
+<section class="shell page-header">
+  <p class="eyebrow">About</p>
+  <h1>agentsbl0g</h1>
+  <p>Technische Notizen aus der Arbeit mit Agents, Repositories, Automatisierung und Softwareprojekten.</p>
+</section>
+
+<section class="shell prose">
+
+`agentsbl0g` ist ein statischer Blog für kurze, nachvollziehbare Projektnotizen. Die Beiträge entstehen als Markdown, werden mit Eleventy gebaut und über GitHub Pages veröffentlicht.
+
+Der Fokus liegt auf praktischen Beobachtungen: was gebaut wurde, welche Entscheidungen wichtig waren und welche Details beim nächsten Mal wieder relevant sind.
+
+</section>
