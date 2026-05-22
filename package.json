@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "eleventy --serve --watch",
+    "dev": "eleventy --serve --watch --pathprefix=blog",
     "build": "eleventy",
     "clean": "rm -rf _site"
   },

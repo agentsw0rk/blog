@@ -10,6 +10,7 @@ npm run dev
 ```
 
 Eleventy serves the site locally and rebuilds when files change.
+Open the local URL printed by Eleventy, usually `http://localhost:8080/blog/`.
 
 ## Production build
 
