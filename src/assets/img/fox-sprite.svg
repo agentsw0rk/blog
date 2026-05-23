@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" viewBox="0 0 384 48" shape-rendering="crispEdges">
+  <defs>
+    <g id="fox-a">
+      <rect x="14" y="10" width="6" height="6" fill="#f97316"/>
+      <rect x="26" y="10" width="6" height="6" fill="#f97316"/>
+      <rect x="12" y="16" width="24" height="6" fill="#fb923c"/>
+      <rect x="36" y="18" width="18" height="6" fill="#fb923c"/>
+      <rect x="54" y="20" width="18" height="6" fill="#f97316"/>
+      <rect x="72" y="18" width="10" height="6" fill="#fb923c"/>
+      <rect x="82" y="14" width="8" height="6" fill="#fed7aa"/>
+      <rect x="8" y="22" width="10" height="6" fill="#fed7aa"/>
+      <rect x="18" y="22" width="30" height="10" fill="#f97316"/>
+      <rect x="48" y="24" width="14" height="8" fill="#fb923c"/>
+      <rect x="20" y="28" width="28" height="6" fill="#fed7aa"/>
+      <rect x="16" y="34" width="8" height="6" fill="#1f2937"/>
+      <rect x="44" y="34" width="8" height="6" fill="#1f2937"/>
+      <rect x="30" y="32" width="8" height="6" fill="#1f2937"/>
+      <rect x="12" y="18" width="4" height="4" fill="#111827"/>
+      <rect x="6" y="22" width="4" height="4" fill="#111827"/>
+    </g>
+    <g id="fox-b">
+      <rect x="14" y="10" width="6" height="6" fill="#f97316"/>
+      <rect x="26" y="10" width="6" height="6" fill="#f97316"/>
+      <rect x="12" y="16" width="24" height="6" fill="#fb923c"/>
+      <rect x="36" y="18" width="18" height="6" fill="#fb923c"/>
+      <rect x="54" y="19" width="18" height="6" fill="#f97316"/>
+      <rect x="72" y="16" width="11" height="6" fill="#fb923c"/>
+      <rect x="83" y="11" width="8" height="6" fill="#fed7aa"/>
+      <rect x="8" y="22" width="10" height="6" fill="#fed7aa"/>
+      <rect x="18" y="22" width="30" height="10" fill="#f97316"/>
+      <rect x="48" y="24" width="14" height="8" fill="#fb923c"/>
+      <rect x="20" y="28" width="28" height="6" fill="#fed7aa"/>
+      <rect x="22" y="34" width="8" height="6" fill="#1f2937"/>
+      <rect x="38" y="34" width="8" height="6" fill="#1f2937"/>
+      <rect x="52" y="32" width="8" height="6" fill="#1f2937"/>
+      <rect x="12" y="18" width="4" height="4" fill="#111827"/>
+      <rect x="6" y="22" width="4" height="4" fill="#111827"/>
+    </g>
+    <g id="fox-c">
+      <rect x="14" y="9" width="6" height="6" fill="#f97316"/>
+      <rect x="26" y="9" width="6" height="6" fill="#f97316"/>
+      <rect x="12" y="15" width="24" height="6" fill="#fb923c"/>
+      <rect x="36" y="17" width="18" height="6" fill="#fb923c"/>
+      <rect x="54" y="19" width="18" height="6" fill="#f97316"/>
+      <rect x="72" y="20" width="10" height="6" fill="#fb923c"/>
+      <rect x="82" y="22" width="8" height="6" fill="#fed7aa"/>
+      <rect x="8" y="21" width="10" height="6" fill="#fed7aa"/>
+      <rect x="18" y="21" width="30" height="10" fill="#f97316"/>
+      <rect x="48" y="23" width="14" height="8" fill="#fb923c"/>
+      <rect x="20" y="27" width="28" height="6" fill="#fed7aa"/>
+      <rect x="16" y="33" width="8" height="6" fill="#1f2937"/>
+      <rect x="44" y="33" width="8" height="6" fill="#1f2937"/>
+      <rect x="30" y="31" width="8" height="6" fill="#1f2937"/>
+      <rect x="12" y="17" width="4" height="4" fill="#111827"/>
+      <rect x="6" y="21" width="4" height="4" fill="#111827"/>
+    </g>
+  </defs>
+  <use href="#fox-a" x="0" y="0"/>
+  <use href="#fox-b" x="96" y="0"/>
+  <use href="#fox-c" x="192" y="0"/>
+  <use href="#fox-b" x="288" y="0"/>
+</svg>
