@@ -117,7 +117,7 @@ video {
 }
 
 .brand {
-  gap: 12px;
+  gap: 8px;
   text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(48vw, 300px);
+  width: min(48vw, 276px);
   height: 45px;
   overflow: hidden;
   line-height: 1.1;
@@ -204,6 +204,7 @@ video {
 
 .ansi-logo.brand-ansi-logo {
   --ansi-logo-y: 0px;
+  justify-content: flex-start;
 }
 
 .ansi-logo-art {
@@ -592,7 +593,7 @@ h3 {
   }
 
   .brand-name {
-    width: min(calc(100vw - 118px), 272px);
+    width: min(calc(100vw - 112px), 244px);
     height: 41px;
   }
 
