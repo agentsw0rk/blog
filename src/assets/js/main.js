@@ -53,7 +53,7 @@ function initAnsiLogoRotation() {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const render = () => {
     const logo = logos[index];
-    target.innerHTML = ansiToHtml(logo.ansi);
+    target.innerHTML = `<span class="ansi-logo-art">${ansiToHtml(logo.ansi)}</span>`;
     target.dataset.font = logo.font;
   };
 
