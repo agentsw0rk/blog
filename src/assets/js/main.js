@@ -43,7 +43,6 @@ for (const block of document.querySelectorAll("pre")) {
 
 function initAnsiLogoRotation() {
   const target = document.querySelector("[data-ansi-logo]");
-  const meta = document.querySelector("[data-ansi-logo-meta]");
   const logos = window.AGENT_ANSI_LOGOS || [];
 
   if (!target || logos.length === 0) {
@@ -56,10 +55,6 @@ function initAnsiLogoRotation() {
     const logo = logos[index];
     target.innerHTML = ansiToHtml(logo.ansi);
     target.dataset.font = logo.font;
-
-    if (meta) {
-      meta.textContent = `${String(index + 1).padStart(2, "0")} / ${String(logos.length).padStart(2, "0")} · ${logo.font}`;
-    }
   };
 
   render();

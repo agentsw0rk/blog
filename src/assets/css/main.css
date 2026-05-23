@@ -171,36 +171,28 @@ video {
 }
 
 .ansi-logo-stage {
-  padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .ansi-logo-frame {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(114, 228, 255, 0.16);
-  border-radius: 8px;
-  min-height: 70px;
-  padding: 12px 14px 10px;
-  background:
-    linear-gradient(90deg, rgba(111, 242, 180, 0.08), transparent 42%),
-    rgba(4, 10, 15, 0.72);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 0 6px;
 }
 
 .ansi-logo-frame::after {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  content: "";
-  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 100% 4px;
-  mix-blend-mode: screen;
-  opacity: 0.42;
+  content: none;
 }
 
 .ansi-logo {
   overflow: hidden;
-  margin: 0;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
   min-height: 44px;
   max-height: 54px;
   color: var(--green);
@@ -217,20 +209,6 @@ video {
 .ansi-logo.is-switching {
   transform: translateY(4px);
   opacity: 0.1;
-}
-
-.ansi-logo-meta {
-  position: absolute;
-  right: 12px;
-  bottom: 8px;
-  z-index: 1;
-  border: 1px solid rgba(114, 228, 255, 0.16);
-  border-radius: 6px;
-  padding: 3px 6px;
-  background: rgba(7, 16, 22, 0.82);
-  color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.7rem;
 }
 
 .hero {
@@ -620,17 +598,13 @@ h3 {
 
   .ansi-logo-frame {
     min-height: 48px;
-    padding: 8px 9px;
+    padding: 8px 0;
   }
 
   .ansi-logo {
     min-height: 32px;
     max-height: 36px;
     font-size: 0.24rem;
-  }
-
-  .ansi-logo-meta {
-    display: none;
   }
 
   .button {
