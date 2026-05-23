@@ -46,7 +46,16 @@ eleventyComputed:
 
 <section class="shell section" aria-labelledby="recent-title">
   <div class="section-heading">
-    <h2 id="recent-title">Aktuelle Einträge{% if pagination.pageNumber > 0 %} · Seite {{ pagination.pageNumber + 1 }}{% endif %}</h2>
+    <h2 id="recent-title" class="ansi-section-heading">
+      <span class="sr-only">Aktuelle Einträge{% if pagination.pageNumber > 0 %} · Seite {{ pagination.pageNumber + 1 }}{% endif %}</span>
+      <span class="ansi-section-title" aria-hidden="true">▄▀▀▀▄ ▄   ▄ █    ▄   ▄  ▄▄▄  ▄  ▄   ▄▄▄     █▀▀▀▀ ▀    ▄▄  █    ▄ ▄▄  ▄▄▄   ▄▄▄   ▄▄▄▄  ▄▄▄
+█   █ █ ▄▀  █▀▀▀ █   █ █▄▄▄█ █  █  █▄▄▄█    █▄▄▄ ▀█  █▀  █ █▀▀▀ █▀    ▄▄▄█ █▄▄▄█ █   █ █▄▄▄█
+█▀▀▀█ █▀▀▄  █    █  ▄█ █     █  █  █        █     █  █   █ █    █    █   █ █     ▀▄▄▄█ █
+▀   ▀ ▀   ▀  ▀▀▀  ▀▀ ▀  ▀▀▀▀  ▀▀ ▀▀ ▀▀▀▀    ▀▀▀▀▀▀▀▀ ▀   ▀  ▀▀▀ ▀     ▀▀▀▀  ▀▀▀▀  ▄▄▄▀  ▀▀▀▀</span>
+      {% if pagination.pageNumber > 0 %}
+        <span class="ansi-section-kicker" aria-hidden="true">/ Seite {{ pagination.pageNumber + 1 }}</span>
+      {% endif %}
+    </h2>
     <span class="section-count">{{ collections.posts.length }} Beiträge</span>
   </div>
   <div class="post-grid">
@@ -83,7 +92,13 @@ eleventyComputed:
 {% if pagination.pageNumber == 0 %}
 <section class="shell section" aria-labelledby="topics-title">
   <div class="section-heading">
-    <h2 id="topics-title">Topics</h2>
+    <h2 id="topics-title" class="ansi-section-heading">
+      <span class="sr-only">Topics</span>
+      <span class="ansi-section-title ansi-section-title-small" aria-hidden="true">▀▀█▀▀  ▄▄▄  ▄▄▄▄   ▀   ▄▄▄   ▄▄▄
+  █   █   █ █   █ ▀█  █   ▀ ▀▄▄▄
+  █   █   █ █▄▄▄▀  █  █     ▄   █
+  ▀    ▀▀▀  █     ▀▀▀  ▀▀▀▀  ▀▀▀</span>
+    </h2>
     <a href="{{ '/tags/' | url(site.url) }}">Alle Tags</a>
   </div>
   <div class="topic-cloud">

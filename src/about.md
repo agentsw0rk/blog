@@ -6,7 +6,13 @@ description: Über agentsbl0g.
 
 <section class="shell page-header">
   <p class="eyebrow">About</p>
-  <h1>agentsbl0g</h1>
+  <h1 class="ansi-section-heading">
+    <span class="sr-only">agentsbl0g</span>
+    <span class="ansi-section-title ansi-page-title" aria-hidden="true"> ▄▄▄   ▄▄▄▄  ▄▄▄    ▄▄  █     ▄▄▄  █     ▄   ▄▀▀▀▄  ▄▄▄▄
+ ▄▄▄█ █   █ █▄▄▄█ █▀  █ █▀▀▀ ▀▄▄▄  █▀▀▀▄ █   █ █ █ █   █
+█   █ ▀▄▄▄█ █     █   █ █    ▄   █ █   █ █   █ ▀ █ ▀▄▄▄█
+ ▀▀▀▀  ▄▄▄▀  ▀▀▀▀ ▀   ▀  ▀▀▀  ▀▀▀  ▀▀▀▀   ▀▀  ▀▀▀   ▄▄▄▀</span>
+  </h1>
   <p>Notizen über Context Engineering, Wissensaufbau, agentische Systeme und Werkzeuge für technisch versierte Menschen.</p>
 </section>
 

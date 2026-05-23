@@ -76,6 +76,16 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
 img,
 svg,
 video {
@@ -401,6 +411,47 @@ h3 {
   color: var(--green);
   font-weight: 700;
   text-decoration: none;
+}
+
+.ansi-section-heading {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+.ansi-section-title {
+  display: block;
+  max-width: 100%;
+  overflow-x: clip;
+  background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 52%, var(--amber) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--green);
+  filter: drop-shadow(0 0 12px rgba(111, 242, 180, 0.18));
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(0.34rem, 0.6vw, 0.56rem);
+  line-height: 0.92;
+  -webkit-text-fill-color: transparent;
+  white-space: pre;
+}
+
+.ansi-section-title-small {
+  font-size: clamp(0.42rem, 0.74vw, 0.68rem);
+}
+
+.ansi-page-title {
+  font-size: clamp(0.42rem, 0.88vw, 0.82rem);
+  line-height: 0.95;
+}
+
+.ansi-page-title-compact {
+  font-size: clamp(0.68rem, 1.35vw, 1.05rem);
+}
+
+.ansi-section-kicker {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
 }
 
 .section-count {
