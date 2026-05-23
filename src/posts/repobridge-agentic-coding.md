@@ -3,6 +3,7 @@ layout: post.njk
 title: "Warum AI-Agenten Quellcode brauchen: Context Engineering mit repobridge"
 description: "Ein Agent soll eine React/Vite-App erweitern - aber kennt er den Code hinter den Abhängigkeiten?"
 date: 2026-05-23
+author: arek
 tags:
   - AI Agents
   - Context Engineering

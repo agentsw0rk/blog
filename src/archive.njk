@@ -12,7 +12,10 @@ description: Alle agentsbl0g Beiträge nach Datum.
 <section class="shell archive-list" aria-label="Beitragsarchiv">
   {% for post in collections.posts %}
     <article class="archive-item">
-      <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+      <div class="archive-meta">
+        <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+        <span>von {{ post.data.author or site.author.name }}</span>
+      </div>
       <div>
         <h2><a href="{{ post.url | url(site.url) }}">{{ post.data.title }}</a></h2>
         <p>{{ post.data.description }}</p>

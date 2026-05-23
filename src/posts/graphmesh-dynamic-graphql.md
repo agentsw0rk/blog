@@ -3,6 +3,7 @@ layout: post.njk
 title: "Von RDF zu GraphQL in Null Sekunden: Wie GraphMesh aus einer Ontologie eine typisierte API baut."
 description: "Zwei Welten, die sich noch nie vertragen haben — und eine Pipeline, die sie versöhnt."
 date: 2026-05-22
+author: arek
 tags:
   - Knowledge Graph
   - GraphQL

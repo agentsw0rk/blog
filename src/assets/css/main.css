@@ -361,10 +361,16 @@ h3 {
 }
 
 .featured time,
-.archive-item time {
+.archive-item time,
+.archive-meta span {
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.86rem;
+}
+
+.archive-meta {
+  display: grid;
+  gap: 4px;
 }
 
 .featured a,

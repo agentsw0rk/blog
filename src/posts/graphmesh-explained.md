@@ -3,6 +3,7 @@ layout: post.njk
 title: "Was passiert eigentlich, wenn eine KI deinen Text liest? Ein Blick in GraphMesh."
 description: "Fuenf Saetze ueber arktische Forschung — und 98 Verbindungen, die daraus entstehen."
 date: 2026-05-21
+author: arek
 tags:
   - Knowledge Graph
   - AI

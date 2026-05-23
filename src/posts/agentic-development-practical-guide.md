@@ -3,6 +3,7 @@ layout: post.njk
 title: "Agentic Development: Die wichtigsten Best Practices verstaendlich erklaert"
 description: "Ein kompakter Leitfaden fuer verlaessliche LLM-Agenten ohne Framework-Ballast."
 date: 2026-05-23T07:00:00+02:00
+author: arek
 tags:
   - AI Agents
   - Agentic Development
