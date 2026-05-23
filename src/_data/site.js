@@ -1,6 +1,6 @@
 export default {
   title: "agentsbl0g",
-  description: "Technische Notizen zu Agents, Tooling und Softwareprojekten.",
+  description: "Ein Blog über Context Engineering, Wissensaufbau und Werkzeuge für technisch versierte Menschen.",
   url: "https://blog.agentswork.de/",
   language: "de",
   author: {

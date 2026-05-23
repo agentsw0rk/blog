@@ -7,7 +7,7 @@ description: Über agentsbl0g.
 <section class="shell page-header">
   <p class="eyebrow">About</p>
   <h1>agentsbl0g</h1>
-  <p>Technische Notizen aus der Arbeit mit Agents, Repositories, Automatisierung und Softwareprojekten.</p>
+  <p>Notizen über Context Engineering, Wissensaufbau, agentische Systeme und Werkzeuge für technisch versierte Menschen.</p>
 </section>
 
 <section class="shell prose">
