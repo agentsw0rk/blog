@@ -145,11 +145,11 @@ video {
 
 .brand-ansi-logo {
   width: max-content;
-  max-width: min(34vw, 176px);
+  max-width: min(38vw, 205px);
   min-height: 19px;
   max-height: 23px;
   margin: 0;
-  font-size: 0.18rem;
+  font-size: 0.16rem;
 }
 
 .brand-name span,
@@ -187,13 +187,18 @@ video {
   letter-spacing: 0;
   opacity: 1;
   text-shadow: 0 0 18px rgba(111, 242, 180, 0.28);
-  transition: opacity 180ms ease, transform 180ms ease;
+  filter: blur(0);
+  transition:
+    opacity 420ms ease,
+    transform 420ms ease,
+    filter 420ms ease;
   white-space: pre;
 }
 
 .ansi-logo.is-switching {
-  transform: translateY(4px);
-  opacity: 0.1;
+  transform: translateY(2px) scale(0.985);
+  filter: blur(2px);
+  opacity: 0;
 }
 
 .hero {
@@ -569,10 +574,10 @@ h3 {
   }
 
   .brand-ansi-logo {
-    max-width: 155px;
+    max-width: 178px;
     min-height: 18px;
     max-height: 21px;
-    font-size: 0.16rem;
+    font-size: 0.14rem;
   }
 
   .nav-links {

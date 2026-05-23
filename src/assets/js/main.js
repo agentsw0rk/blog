@@ -70,8 +70,8 @@ function initAnsiLogoRotation() {
       index = (index + 1) % logos.length;
       render();
       target.classList.remove("is-switching");
-    }, 180);
-  }, 2600);
+    }, 420);
+  }, 3200);
 }
 
 function getBasePath(links) {
