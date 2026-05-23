@@ -2,8 +2,16 @@
 layout: base.njk
 title: Start
 description: Ein Blog über Context Engineering, Wissensaufbau und Werkzeuge für technisch versierte Menschen.
+pagination:
+  data: collections.posts
+  size: 6
+  alias: paginatedPosts
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyComputed:
+  title: "{% if pagination.pageNumber == 0 %}Start{% else %}Start · Seite {{ pagination.pageNumber + 1 }}{% endif %}"
 ---
 {% set latest = collections.posts[0] %}
+{% if pagination.pageNumber == 0 %}
 <section class="hero shell">
   <div class="hero-copy">
     <p class="eyebrow">Context Engineering / Knowledge Work / Agentic Systems</p>
@@ -34,19 +42,45 @@ description: Ein Blog über Context Engineering, Wissensaufbau und Werkzeuge fü
   <time datetime="{{ latest.date | htmlDate }}">{{ latest.date | readableDate }}</time>
 </section>
 {% endif %}
+{% endif %}
 
 <section class="shell section" aria-labelledby="recent-title">
   <div class="section-heading">
-    <h2 id="recent-title">Aktuelle Einträge</h2>
-    <a href="{{ '/archive/' | url(site.url) }}">Archiv öffnen</a>
+    <h2 id="recent-title">Aktuelle Einträge{% if pagination.pageNumber > 0 %} · Seite {{ pagination.pageNumber + 1 }}{% endif %}</h2>
+    <span class="section-count">{{ collections.posts.length }} Beiträge</span>
   </div>
   <div class="post-grid">
-    {% for post in collections.posts | head(3) %}
+    {% for post in paginatedPosts %}
       {% include "post-card.njk" %}
     {% endfor %}
   </div>
+
+  {% if pagination.pages.length > 1 %}
+    <nav class="pagination" aria-label="Seitennavigation für aktuelle Einträge">
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous | url(site.url) }}">Neuere</a>
+      {% else %}
+        <span aria-disabled="true">Neuere</span>
+      {% endif %}
+
+      <ol>
+        {% for href in pagination.hrefs %}
+          <li>
+            <a href="{{ href | url(site.url) }}"{% if page.url == href %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next | url(site.url) }}">Ältere</a>
+      {% else %}
+        <span aria-disabled="true">Ältere</span>
+      {% endif %}
+    </nav>
+  {% endif %}
 </section>
 
+{% if pagination.pageNumber == 0 %}
 <section class="shell section" aria-labelledby="topics-title">
   <div class="section-heading">
     <h2 id="topics-title">Topics</h2>
@@ -58,3 +92,4 @@ description: Ein Blog über Context Engineering, Wissensaufbau und Werkzeuge fü
     {% endfor %}
   </div>
 </section>
+{% endif %}

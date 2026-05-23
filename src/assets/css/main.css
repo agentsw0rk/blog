@@ -403,10 +403,66 @@ h3 {
   text-decoration: none;
 }
 
+.section-count {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86rem;
+}
+
 .post-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.pagination,
+.pagination ol {
+  display: flex;
+  align-items: center;
+}
+
+.pagination {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+  border-top: 1px solid rgba(114, 228, 255, 0.12);
+  padding-top: 22px;
+}
+
+.pagination ol {
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  min-height: 38px;
+  border: 1px solid rgba(114, 228, 255, 0.22);
+  border-radius: 8px;
+  padding: 8px 11px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86rem;
+  text-decoration: none;
+}
+
+.pagination a:hover,
+.pagination a[aria-current="page"] {
+  border-color: rgba(111, 242, 180, 0.52);
+  background: rgba(111, 242, 180, 0.08);
+  color: var(--green);
+}
+
+.pagination span[aria-disabled="true"] {
+  opacity: 0.42;
 }
 
 .post-card,
