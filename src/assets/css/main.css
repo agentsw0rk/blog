@@ -151,6 +151,7 @@ video {
   max-height: 45px;
   margin: 0;
   font-size: 0.36rem;
+  transform: translateY(var(--ansi-logo-y));
 }
 
 .brand-name span,
@@ -181,6 +182,7 @@ video {
 }
 
 .ansi-logo {
+  --ansi-logo-y: 0px;
   overflow: hidden;
   color: var(--green);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -196,8 +198,12 @@ video {
   white-space: pre;
 }
 
+.ansi-logo.brand-ansi-logo {
+  --ansi-logo-y: 3px;
+}
+
 .ansi-logo.is-switching {
-  transform: translateY(2px) scale(0.985);
+  transform: translateY(calc(var(--ansi-logo-y) + 2px)) scale(0.985);
   filter: blur(2px);
   opacity: 0;
 }
