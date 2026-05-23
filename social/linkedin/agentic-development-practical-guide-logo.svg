@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic Development Practical Guide ANSI logo</title>
+  <desc id="desc">Gradient ANSI-style text on a white background for the agentsbl0g Agentic Development Practical Guide article.</desc>
+  <defs>
+    <linearGradient id="ansiGradient" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16a66f"/>
+      <stop offset="0.32" stop-color="#0ca6cc"/>
+      <stop offset="0.58" stop-color="#d69a00"/>
+      <stop offset="0.82" stop-color="#0ca6cc"/>
+      <stop offset="1" stop-color="#16a66f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="54" y="54" width="1092" height="522" rx="0" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+  <line x1="54" y1="118" x2="1146" y2="118" stroke="#0b161d" stroke-width="3"/>
+  <circle cx="86" cy="86" r="8" fill="#0b161d"/>
+  <circle cx="116" cy="86" r="8" fill="#0b161d"/>
+  <circle cx="146" cy="86" r="8" fill="#0b161d"/>
+  <text x="1100" y="93" text-anchor="end" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" font-weight="700" letter-spacing="1">agentsbl0g</text>
+  <text x="600" y="232" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25" font-weight="700" letter-spacing="0" xml:space="preserve">▄▀▀▀▄ ▄▀▀▀▀ █▀▀▀▀ █▄  █ ▀▀█▀▀ ▀█▀ ▄▀▀▀▄    ▀█▀▀▀▄█▀▀▀▀ █   █</text>
+  <text x="600" y="264" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25" font-weight="700" letter-spacing="0" xml:space="preserve">█   █ █  ▄▄ █▄▄▄  █ ▀▄█   █    █  █         █   ██▄▄▄  █   █</text>
+  <text x="600" y="296" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25" font-weight="700" letter-spacing="0" xml:space="preserve">█▀▀▀█ █   █ █     █   █   █    █  █   ▄     █   ██      █ █ </text>
+  <text x="600" y="328" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25" font-weight="700" letter-spacing="0" xml:space="preserve">▀   ▀  ▀▀▀▀ ▀▀▀▀▀ ▀   ▀   ▀   ▀▀▀  ▀▀▀      ▀▀▀▀ ▀▀▀▀▀   ▀  </text>
+  <text x="600" y="398" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="0" xml:space="preserve">█▀▀▀▄ █▀▀▀▄ ▄▀▀▀▄ ▄▀▀▀▄ ▀▀█▀▀ ▀█▀ ▄▀▀▀▄ ▄▀▀▀▄ █       ▄▀▀▀▀█   █ ▀█▀ ▀█▀▀▀▄ █▀▀▀▀</text>
+  <text x="600" y="421" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="0" xml:space="preserve">█▄▄▄▀ █▄▄▄▀ █   █ █       █    █  █     █   █ █       █  ▄▄█   █  █   █   █ █▄▄▄ </text>
+  <text x="600" y="444" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="0" xml:space="preserve">█     █  ▀▄ █▀▀▀█ █   ▄   █    █  █   ▄ █▀▀▀█ █       █   ██   █  █   █   █ █    </text>
+  <text x="600" y="467" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="0" xml:space="preserve">▀     ▀   ▀ ▀   ▀  ▀▀▀    ▀   ▀▀▀  ▀▀▀  ▀   ▀ ▀▀▀▀     ▀▀▀▀ ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀▀▀</text>
+  <text x="600" y="535" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">CONTEXT · TOOLS · SAFETY · OBSERVABILITY · EVALS</text>
+</svg>
