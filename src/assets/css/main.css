@@ -385,6 +385,12 @@ h3 {
   gap: 20px;
 }
 
+.section-heading {
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgba(114, 228, 255, 0.16);
+  padding-bottom: 14px;
+}
+
 .section-heading a {
   color: var(--green);
   font-weight: 700;
