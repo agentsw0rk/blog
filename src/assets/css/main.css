@@ -140,16 +140,17 @@ video {
 .brand-name {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   line-height: 1.1;
 }
 
 .brand-ansi-logo {
   width: max-content;
-  max-width: min(38vw, 205px);
-  min-height: 19px;
-  max-height: 23px;
+  max-width: min(44vw, 260px);
+  min-height: 38px;
+  max-height: 40px;
   margin: 0;
-  font-size: 0.16rem;
+  font-size: 0.31rem;
 }
 
 .brand-name span,
@@ -569,15 +570,11 @@ h3 {
 }
 
 @media (max-width: 520px) {
-  .brand-name span {
-    display: none;
-  }
-
   .brand-ansi-logo {
-    max-width: 178px;
-    min-height: 18px;
-    max-height: 21px;
-    font-size: 0.14rem;
+    max-width: 240px;
+    min-height: 34px;
+    max-height: 36px;
+    font-size: 0.28rem;
   }
 
   .nav-links {
