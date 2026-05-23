@@ -146,11 +146,11 @@ video {
 
 .brand-ansi-logo {
   width: max-content;
-  max-width: min(44vw, 260px);
-  min-height: 38px;
-  max-height: 40px;
+  max-width: min(48vw, 300px);
+  min-height: 43px;
+  max-height: 45px;
   margin: 0;
-  font-size: 0.31rem;
+  font-size: 0.36rem;
 }
 
 .brand-name span,
@@ -571,10 +571,10 @@ h3 {
 
 @media (max-width: 520px) {
   .brand-ansi-logo {
-    max-width: 240px;
-    min-height: 34px;
-    max-height: 36px;
-    font-size: 0.28rem;
+    max-width: 272px;
+    min-height: 39px;
+    max-height: 41px;
+    font-size: 0.32rem;
   }
 
   .nav-links {
