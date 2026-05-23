@@ -38,6 +38,16 @@ html {
   }
 }
 
+@keyframes ansi-gradient-flow {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
+
 body {
   margin: 0;
   background:
@@ -423,8 +433,11 @@ h3 {
   display: block;
   max-width: 100%;
   overflow-x: clip;
-  background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 52%, var(--amber) 100%);
+  animation: ansi-gradient-flow 7.5s ease-in-out infinite alternate;
+  background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 28%, var(--amber) 50%, var(--cyan) 72%, var(--green) 100%);
   background-clip: text;
+  background-position: 0% 50%;
+  background-size: 240% 100%;
   -webkit-background-clip: text;
   color: var(--green);
   filter: drop-shadow(0 0 12px rgba(111, 242, 180, 0.18));
