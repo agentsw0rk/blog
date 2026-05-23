@@ -2,6 +2,7 @@ node_modules/
 _site/
 .cache/
 .superpowers/
+.idea/
 .DS_Store
 npm-debug.log*
 raw-md
