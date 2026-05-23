@@ -3,7 +3,7 @@
     <a class="brand" href="{{ '/' | url(site.url) }}" aria-label="{{ site.title }} Startseite">
       <span class="brand-mark">a0</span>
       <span class="brand-name">
-        <strong>{{ site.title }}</strong>
+        <pre class="ansi-logo brand-ansi-logo" data-ansi-logo aria-hidden="true">{{ site.title }}</pre>
         <span>agent notes / build logs</span>
       </span>
     </a>
@@ -13,10 +13,5 @@
       {% endfor %}
       <a class="nav-github" href="{{ site.github }}">GitHub</a>
     </nav>
-  </div>
-  <div class="shell ansi-logo-stage" aria-label="Rotierendes ANSI Logo">
-    <div class="ansi-logo-frame">
-      <pre class="ansi-logo" data-ansi-logo aria-hidden="true">agentsbl0g</pre>
-    </div>
   </div>
 </header>

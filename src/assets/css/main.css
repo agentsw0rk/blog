@@ -143,6 +143,15 @@ video {
   line-height: 1.1;
 }
 
+.brand-ansi-logo {
+  width: max-content;
+  max-width: min(34vw, 176px);
+  min-height: 19px;
+  max-height: 23px;
+  margin: 0;
+  font-size: 0.18rem;
+}
+
 .brand-name span,
 .post-card-meta,
 .article-meta,
@@ -170,34 +179,10 @@ video {
   color: var(--text);
 }
 
-.ansi-logo-stage {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
-}
-
-.ansi-logo-frame {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  min-height: 56px;
-  padding: 8px 0 6px;
-}
-
-.ansi-logo-frame::after {
-  content: none;
-}
-
 .ansi-logo {
   overflow: hidden;
-  width: max-content;
-  max-width: 100%;
-  margin: 0 auto;
-  min-height: 44px;
-  max-height: 54px;
   color: var(--green);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: clamp(0.27rem, 0.62vw, 0.5rem);
   line-height: 0.94;
   letter-spacing: 0;
   opacity: 1;
@@ -583,6 +568,13 @@ h3 {
     display: none;
   }
 
+  .brand-ansi-logo {
+    max-width: 155px;
+    min-height: 18px;
+    max-height: 21px;
+    font-size: 0.16rem;
+  }
+
   .nav-links {
     width: 100%;
     justify-content: flex-start;
@@ -590,21 +582,6 @@ h3 {
 
   .status-panel {
     grid-template-columns: 1fr;
-  }
-
-  .ansi-logo-stage {
-    padding-bottom: 8px;
-  }
-
-  .ansi-logo-frame {
-    min-height: 48px;
-    padding: 8px 0;
-  }
-
-  .ansi-logo {
-    min-height: 32px;
-    max-height: 36px;
-    font-size: 0.24rem;
   }
 
   .button {
