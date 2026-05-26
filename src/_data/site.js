@@ -11,7 +11,13 @@ export default {
     { label: "Start", url: "/" },
     { label: "Archiv", url: "/archive/" },
     { label: "Tags", url: "/tags/" },
-    { label: "About", url: "/about/" }
+    { label: "About", url: "/about/" },
+    {
+      label: "Tools",
+      url: "https://repobridge.agentswork.de/",
+      external: true,
+      variant: "tool"
+    }
   ],
   github: "https://github.com/agentsw0rk/blog"
 };

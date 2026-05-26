@@ -8,7 +8,16 @@
     </a>
     <nav class="nav-links" aria-label="Hauptnavigation">
       {% for item in site.nav %}
-        <a href="{{ item.url | url(site.url) }}" data-nav-link>{{ item.label }}</a>
+        {% set href = item.url %}
+        {% if not item.external %}
+          {% set href = item.url | url(site.url) %}
+        {% endif %}
+        <a
+          {% if item.variant %}class="nav-link-{{ item.variant }}"{% endif %}
+          href="{{ href }}"
+          {% if not item.external %}data-nav-link{% endif %}
+          {% if item.external %}aria-label="{{ item.label }}: repobridge öffnen"{% endif %}
+        >{{ item.label }}</a>
       {% endfor %}
     </nav>
   </div>

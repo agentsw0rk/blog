@@ -267,6 +267,21 @@ video {
   color: var(--text);
 }
 
+.nav-links .nav-link-tool {
+  border: 1px solid rgba(111, 242, 180, 0.38);
+  background:
+    linear-gradient(180deg, rgba(111, 242, 180, 0.14), rgba(114, 228, 255, 0.08));
+  color: var(--green);
+  font-weight: 800;
+}
+
+.nav-links .nav-link-tool:hover {
+  border-color: rgba(111, 242, 180, 0.68);
+  background:
+    linear-gradient(180deg, rgba(111, 242, 180, 0.22), rgba(114, 228, 255, 0.12));
+  color: var(--text);
+}
+
 .ansi-logo {
   --ansi-logo-y: 0px;
   display: flex;
