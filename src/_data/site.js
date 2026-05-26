@@ -13,7 +13,7 @@ export default {
     { label: "Tags", url: "/tags/" },
     { label: "About", url: "/about/" },
     {
-      label: "Tools",
+      label: "RepoBridge",
       url: "https://repobridge.agentswork.de/",
       external: true,
       variant: "tool"
