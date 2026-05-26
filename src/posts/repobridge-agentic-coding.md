@@ -229,6 +229,32 @@ Dann sucht der Agent nicht nur nach Text, sondern nach Struktur:
 - Welche Datei enthält welche Klassen, Methoden und Properties?
 - Welche Klasse enthält welche Member?
 
+Die Suche muss dabei nicht perfekt als Symbolname formuliert sein. In echten
+Agenten-Workflows kommt die Frage oft unscharf aus der Aufgabe: "cache
+invalidation", "auth middleware", "create root", ein halber CamelCase-Name
+oder ein Begriff aus einem Pfad. Ein Mensch würde dann mehrere Varianten
+ausprobieren und Treffer fachlich einordnen. repobridge übernimmt diesen
+Schritt stärker im Suchsystem.
+
+Die neuere Suche kombiniert den AST-Graph mit einem lokalen Volltextindex. Der
+Graph bleibt die fachliche Quelle: Er weiß, ob ein Treffer eine Funktion, eine
+Klasse, eine Route, eine Datei oder eine Methode ist. Der Suchindex hilft dabei,
+auch dann gute Kandidaten zu finden, wenn die Formulierung nicht exakt zum
+Symbolnamen passt. Dadurch funktionieren neben exakten Suchen auch Prefixe,
+Teilbegriffe, CamelCase-Fragmente und begrenzte Tippfehler robuster.
+
+Für Agenten ist das wichtiger als ein besseres Text-Ranking. Sie müssen aus
+einer Aufgabe schnell die richtigen Einstiegspunkte ableiten. Ein Treffer im
+Funktionsnamen zählt anders als ein Treffer im Dateipfad, eine Route anders als
+ein Test-Fixture, und ein exakter Symbolname anders als ein ungefähr passender
+Begriff in einer Signatur. repobridge bewertet diese Signale zusammen, hält
+Filter wie `kind:`, `path:`, `lang:` und `calls:` aber weiterhin verbindlich.
+
+Das Ergebnis ist eine Suche, die fachlich näher an der Frage des Agenten liegt:
+nicht "welche Dateien enthalten diese Zeichenfolge?", sondern "welche
+Code-Elemente sind für diese Aufgabe wahrscheinlich die richtigen
+Einstiegspunkte?".
+
 Das sieht in der Praxis so aus.
 
 ### 1. Funktionen und Symbole finden
