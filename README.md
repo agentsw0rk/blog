@@ -8,7 +8,6 @@ Static technical blog built with Eleventy and deployed to GitHub Pages.
 npm install
 npm run dev
 ```
-
 Eleventy serves the site locally and rebuilds when files change.
 Open the local URL printed by Eleventy, usually `http://localhost:8080/`.
 
