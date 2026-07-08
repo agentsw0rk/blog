@@ -64,11 +64,11 @@ geordnet fließen.
 
 Und sobald ein Mechanismus gebaut werden soll, muss jemand erklären:
 
-- welche Information wichtig ist,
-- wer sie ändern darf,
-- wann sie gelesen wird,
-- was als Reaktion passieren soll,
-- welche Regeln niemals verletzt werden dürfen.
+- welche Information wichtig ist
+- wer sie ändern darf
+- wann sie gelesen wird
+- was als Reaktion passieren soll
+- welche Regeln niemals verletzt werden dürfen
 
 Diese Erklärung ist die Spec.
 
@@ -138,11 +138,11 @@ Fortschritt optimiert ist. Er füllt Lücken mit Wahrscheinlichkeiten.
 
 Genau dort entstehen viele AI-Fehler:
 
-- Die Fachregel war nicht explizit.
-- Der Ausnahmefall war nur im Kopf einer Person.
-- Der bestehende Produktfluss wurde nicht beschrieben.
-- Der Prompt nannte das Ziel, aber nicht die Grenzen.
-- Die Tests prüfen Code, aber nicht die eigentliche Absicht.
+- Die Fachregel war nicht explizit
+- Der Ausnahmefall war nur im Kopf einer Person
+- Der bestehende Produktfluss wurde nicht beschrieben
+- Der Prompt nannte das Ziel, aber nicht die Grenzen
+- Die Tests prüfen Code, aber nicht die eigentliche Absicht
 
 Eine Spec verschiebt Feedback nach links. Sie macht Unklarheit sichtbar,
 bevor Code existiert.
@@ -182,11 +182,11 @@ alten Wahrheit.
 
 Spec Debt ist deshalb eine echte Form von Schulden:
 
-- wichtige Regeln sind nicht beschrieben,
-- alte Regeln sind noch beschrieben,
-- Entscheidungen stehen nur im Code,
-- Tests prüfen historische Zufälle,
-- AI bekommt Kontext, der nicht mehr stimmt.
+- wichtige Regeln sind nicht beschrieben
+- alte Regeln sind noch beschrieben
+- Entscheidungen stehen nur im Code
+- Tests prüfen historische Zufälle
+- AI bekommt Kontext, der nicht mehr stimmt
 
 Spec Driven Development bedeutet nicht, alles sofort perfekt zu spezifizieren.
 Es bedeutet, die wichtigsten Bereiche bewusst zu pflegen: fachkritische
@@ -253,10 +253,10 @@ Der wichtigste Punkt für AI ist vielleicht dieser:
 
 Eine Lösung ist eine Designentscheidung. Zum Beispiel:
 
-- Wir lehnen negative Beträge ab.
-- Wir speichern eine Bestellung erst nach bestätigter Zahlung.
-- Wir zeigen gelöschte Einträge im Audit-Log weiterhin an.
-- Wir bauen eine einfache Suche statt einer semantischen Suche.
+- Wir lehnen negative Beträge ab
+- Wir speichern eine Bestellung erst nach bestätigter Zahlung
+- Wir zeigen gelöschte Einträge im Audit-Log weiterhin an
+- Wir bauen eine einfache Suche statt einer semantischen Suche
 
 Die Spec drückt diese Entscheidung so aus, dass andere damit arbeiten können.
 
@@ -269,12 +269,12 @@ ausschnittsweise kennt.
 Wenn Menschen die Lösung bewusst entscheiden und als Spec ausdrücken, kann AI
 sehr wertvoll werden:
 
-- Sie kann Varianten prüfen.
-- Sie kann Beispiele ergänzen.
-- Sie kann Inkonsistenzen finden.
-- Sie kann Code aus der Spec ableiten.
-- Sie kann Tests gegen die Spec erzeugen.
-- Sie kann bestehende Implementierung mit der Spec vergleichen.
+- Sie kann Varianten prüfen
+- Sie kann Beispiele ergänzen
+- Sie kann Inkonsistenzen finden
+- Sie kann Code aus der Spec ableiten
+- Sie kann Tests gegen die Spec erzeugen
+- Sie kann bestehende Implementierung mit der Spec vergleichen
 
 Die Verantwortung verschiebt sich also nicht weg vom Menschen. Sie wird klarer.
 
@@ -355,20 +355,20 @@ zweite Form.
 ## Was du mitnehmen kannst
 
 1. **AI macht Specs wichtiger, nicht überflüssig.** Wenn Code schneller
-   entsteht, muss Absicht früher und klarer sichtbar sein.
+   entsteht, muss Absicht früher und klarer sichtbar sein
 
 2. **Specs sind Kommunikation von Design.** Sie beschreiben nicht nur Aufgaben,
-   sondern Entscheidungen.
+   sondern Entscheidungen
 
 3. **Frühes Feedback spart die teuersten Fehler.** Eine unklare Spec ist
-   günstiger zu korrigieren als falscher Produktcode.
+   günstiger zu korrigieren als falscher Produktcode
 
 4. **Specs leben.** Sie ändern sich mit Erkenntnissen, Nutzerverhalten und
-   Produktentscheidungen.
+   Produktentscheidungen
 
 5. **Der Mensch bleibt verantwortlich für die Lösung.** AI kann sehr viel
    umsetzen, aber sie sollte nicht heimlich die wichtigsten Designentscheidungen
-   treffen.
+   treffen
 
 ---
 

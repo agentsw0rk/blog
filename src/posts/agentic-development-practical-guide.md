@@ -37,18 +37,18 @@ Bevor du einen Agenten baust, prüfe, ob die Aufgabe wirklich agentisch ist.
 
 Ein Agent lohnt sich, wenn:
 
-- die Eingaben stark variieren,
-- mehrere Wege möglich sind,
-- das System Entscheidungen treffen muss,
-- Zwischenergebnisse bewertet werden müssen,
-- Tools dynamisch ausgewählt werden sollen.
+- die Eingaben stark variieren
+- mehrere Wege möglich sind
+- das System Entscheidungen treffen muss
+- Zwischenergebnisse bewertet werden müssen
+- Tools dynamisch ausgewählt werden sollen
 
 Ein Agent lohnt sich meistens nicht, wenn:
 
-- die Schritte vorher feststehen,
-- es eine klar richtige Ausgabe gibt,
-- ein Validator, Parser oder normaler Algorithmus reicht,
-- nur ein einzelner LLM-Call gebraucht wird.
+- die Schritte vorher feststehen
+- es eine klar richtige Ausgabe gibt
+- ein Validator, Parser oder normaler Algorithmus reicht
+- nur ein einzelner LLM-Call gebraucht wird
 
 Ein gutes Beispiel: Eine Datei nach Markdown konvertieren ist kein Agentenjob.
 Entscheiden, welche Dateien für eine unbekannte Codeänderung relevant sind,
@@ -100,10 +100,10 @@ Beantworte für jeden Agenten vier Fragen:
 
 Ein guter Agent hat eine klare Arbeitsfläche. Zum Beispiel:
 
-- ein Research-Agent findet relevante Quellen,
-- ein Code-Agent macht eine begrenzte Änderung,
-- ein Review-Agent sucht Risiken,
-- ein Router entscheidet, welcher Spezialist gebraucht wird.
+- ein Research-Agent findet relevante Quellen
+- ein Code-Agent macht eine begrenzte Änderung
+- ein Review-Agent sucht Risiken
+- ein Router entscheidet, welcher Spezialist gebraucht wird
 
 Das klingt nach mehr Struktur, spart aber später sehr viel Debugging.
 
@@ -116,10 +116,10 @@ Agent bringt Kosten, Latenz, Kontextübergabe und Fehlerfläche mit.
 
 Nutze mehrere Agenten, wenn sich Aufgaben wirklich trennen lassen:
 
-- unterschiedliche Toolsets,
-- verschiedene Fachdomänen,
-- parallel bearbeitbare Teilaufgaben,
-- klare Qualitätsprüfung durch einen separaten Reviewer.
+- unterschiedliche Toolsets
+- verschiedene Fachdomänen
+- parallel bearbeitbare Teilaufgaben
+- klare Qualitätsprüfung durch einen separaten Reviewer
 
 Vermeide mehrere Agenten, wenn alle dieselben Informationen brauchen und
 eigentlich dieselbe Aufgabe bearbeiten. Dann ist ein einzelner Agent mit
@@ -147,13 +147,13 @@ der Agent schlecht.
 
 Gute Tools haben:
 
-- klare Namen,
-- einfache Parameter,
-- gute Beschreibungen,
-- strukturierte Fehler,
-- Timeouts,
-- Rechtebegrenzung,
-- nachvollziehbare Outputs.
+- klare Namen
+- einfache Parameter
+- gute Beschreibungen
+- strukturierte Fehler
+- Timeouts
+- Rechtebegrenzung
+- nachvollziehbare Outputs
 
 Schlecht sind Tools, die zu viel auf einmal machen oder deren Parameter
 Interpretationsspielraum lassen.
@@ -184,11 +184,11 @@ ist nur Dateninhalt.
 
 Praktische Regeln:
 
-- Externe Inhalte sind Daten, keine Befehle.
-- Read-Tools sind weniger riskant als Write-Tools.
-- Schreibende Aktionen brauchen Freigabe oder klare Policies.
-- Secrets gehören nicht in Prompts, Tool-Parameter oder Logs.
-- Tool-Ausgaben sollten redigiert werden, bevor sie wieder in Kontext kommen.
+- Externe Inhalte sind Daten, keine Befehle
+- Read-Tools sind weniger riskant als Write-Tools
+- Schreibende Aktionen brauchen Freigabe oder klare Policies
+- Secrets gehören nicht in Prompts, Tool-Parameter oder Logs
+- Tool-Ausgaben sollten redigiert werden, bevor sie wieder in Kontext kommen
 
 Bei destruktiven Aktionen gilt: Der Agent darf vorschlagen, aber
 deterministischer Code oder ein Mensch muss freigeben.
@@ -202,11 +202,11 @@ nützlich, aber gefährlich, wenn keine Grenze existiert.
 
 Jede Schleife braucht:
 
-- maximale Iterationen,
-- Zeit- oder Tokenbudget,
-- klares Erfolgskriterium,
-- Fallback bei wiederholtem Scheitern,
-- Eskalation an Mensch oder stärkeres Modell.
+- maximale Iterationen
+- Zeit- oder Tokenbudget
+- klares Erfolgskriterium
+- Fallback bei wiederholtem Scheitern
+- Eskalation an Mensch oder stärkeres Modell
 
 Verlasse dich nie darauf, dass das Modell selbst merkt, wann genug ist.
 
@@ -219,13 +219,13 @@ Raten.
 
 Logge mindestens:
 
-- welche Anfrage gestartet wurde,
-- welcher Agent aktiv war,
-- welche Tools mit welchen Argumenten liefen,
-- wie lange Schritte gedauert haben,
-- welche Fehler auftraten,
-- wie viele Tokens verbraucht wurden,
-- wann ein Handoff oder Retry passiert ist.
+- welche Anfrage gestartet wurde
+- welcher Agent aktiv war
+- welche Tools mit welchen Argumenten liefen
+- wie lange Schritte gedauert haben
+- welche Fehler auftraten
+- wie viele Tokens verbraucht wurden
+- wann ein Handoff oder Retry passiert ist
 
 Nutze Correlation IDs. Ein Agentenlauf sollte später komplett nachvollziehbar
 sein, ohne dass du Chatverläufe manuell rekonstruieren musst.

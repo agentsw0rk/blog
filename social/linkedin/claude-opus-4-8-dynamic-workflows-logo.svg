@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 4.8 Dynamic Workflows teaser image</title>
+  <desc id="desc">Terminal-style LinkedIn teaser image with a bit grid and workflow nodes for an agentsbl0g article about Claude Opus 4.8 and Dynamic Workflows.</desc>
+  <defs>
+    <linearGradient id="ansiGradient" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16a66f"/>
+      <stop offset="0.30" stop-color="#0ca6cc"/>
+      <stop offset="0.56" stop-color="#d69a00"/>
+      <stop offset="0.82" stop-color="#0ca6cc"/>
+      <stop offset="1" stop-color="#16a66f"/>
+    </linearGradient>
+    <linearGradient id="nodeGradient" x1="260" y1="175" x2="940" y2="455" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16a66f" stop-opacity="0.18"/>
+      <stop offset="0.50" stop-color="#0ca6cc" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#d69a00" stop-opacity="0.18"/>
+    </linearGradient>
+    <pattern id="bitGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <rect width="34" height="34" fill="none"/>
+      <text x="7" y="14" fill="#0b161d" opacity="0.16" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700">1</text>
+      <text x="22" y="29" fill="#0ca6cc" opacity="0.28" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700">0</text>
+    </pattern>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0b161d"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="54" y="54" width="1092" height="522" rx="0" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+  <line x1="54" y1="118" x2="1146" y2="118" stroke="#0b161d" stroke-width="3"/>
+  <circle cx="86" cy="86" r="8" fill="#0b161d"/>
+  <circle cx="116" cy="86" r="8" fill="#0b161d"/>
+  <circle cx="146" cy="86" r="8" fill="#0b161d"/>
+  <text x="1100" y="93" text-anchor="end" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" font-weight="700" letter-spacing="1">agentsbl0g</text>
+
+  <rect x="102" y="145" width="996" height="346" fill="url(#bitGrid)" opacity="0.35"/>
+  <rect x="206" y="178" width="788" height="260" fill="url(#nodeGradient)" stroke="#0b161d" stroke-width="2"/>
+
+  <line x1="372" y1="309" x2="500" y2="258" stroke="#0b161d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="372" y1="309" x2="500" y2="360" stroke="#0b161d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="660" y1="258" x2="816" y2="309" stroke="#0b161d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="660" y1="360" x2="816" y2="309" stroke="#0b161d" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="236" y="267" width="142" height="84" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+  <rect x="510" y="214" width="150" height="84" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+  <rect x="510" y="320" width="150" height="84" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+  <rect x="828" y="267" width="142" height="84" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+
+  <text x="307" y="300" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="900">PLAN</text>
+  <text x="307" y="326" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700">ORCHESTRATE</text>
+  <text x="585" y="247" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="900">AGENTS</text>
+  <text x="585" y="273" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700">PARALLEL</text>
+  <text x="585" y="353" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="900">VERIFY</text>
+  <text x="585" y="379" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700">FINDINGS</text>
+  <text x="899" y="300" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="900">MERGE</text>
+  <text x="899" y="326" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700">REPORT</text>
+
+  <text x="600" y="170" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="36" font-weight="900" letter-spacing="0">CLAUDE OPUS 4.8</text>
+  <text x="600" y="529" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="58" font-weight="900" letter-spacing="0">DYNAMIC WORKFLOWS</text>
+  <text x="600" y="559" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">PLAN · PARALLEL AGENTS · VERIFICATION · BUDGETS</text>
+</svg>

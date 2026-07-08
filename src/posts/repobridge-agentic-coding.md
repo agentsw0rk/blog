@@ -195,12 +195,12 @@ repobridge search project:. "kind:route path:/login" --limit 10
 
 Was passiert dabei?
 
-1. **Projektwurzel finden.** Dependency-Kontext ist immer projektbezogen.
-2. **Manifest- und Lockfile-Signale lesen.** Versionen schlagen Allgemeinwissen.
-3. **Imports als Zusatzsignal nutzen.** Nicht jede transitive Dependency ist relevant.
-4. **Source Code holen.** repobridge cached Source Snapshots lokal.
+1. **Projektwurzel finden.** Dependency-Kontext ist immer projektbezogen
+2. **Manifest- und Lockfile-Signale lesen.** Versionen schlagen Allgemeinwissen
+3. **Imports als Zusatzsignal nutzen.** Nicht jede transitive Dependency ist relevant
+4. **Source Code holen.** repobridge cached Source Snapshots lokal
 5. **Lesen und suchen.** Der Agent nutzt `search`, `node`, `callers`, `callees`,
-   `context` und `explore`.
+   `context` und `explore`
 
 Beispiel:
 
@@ -459,10 +459,10 @@ Default-Werte, Tests, Edge Cases und echte Implementierungsdetails.
 
 Gerade für Agenten macht das einen Unterschied:
 
-- Docs passen nicht immer zur installierten Version.
-- Beispiele zeigen selten Grenzfälle.
-- Interne Defaults stehen oft nur im Code.
-- Tests erklären Verhalten, das in Guides nicht auftaucht.
+- Docs passen nicht immer zur installierten Version
+- Beispiele zeigen selten Grenzfälle
+- Interne Defaults stehen oft nur im Code
+- Tests erklären Verhalten, das in Guides nicht auftaucht
 
 Das Ziel ist nicht, Dokumentation zu ersetzen. Das Ziel ist, die Lücke
 zwischen Dokumentation, Projektcode und tatsächlicher Implementierung zu
@@ -473,19 +473,19 @@ schließen.
 ## Was du mitnehmen kannst
 
 1. **Kontext ist ein Designproblem.** Gute Agenten brauchen Dateien, Befehle,
-   Suchwerkzeuge, Versionswissen und klare Grenzen.
+   Suchwerkzeuge, Versionswissen und klare Grenzen
 
 2. **Versionen schlagen Allgemeinwissen.** "React" ist zu ungenau. "React in
-   der Version dieses Projekts" ist handlungsfähiger Kontext.
+   der Version dieses Projekts" ist handlungsfähiger Kontext
 
 3. **Nicht alles ist Kontext.** Ein fokussierter Source Tree ist besser als
-   ein riesiger Dump transitive Dependencies.
+   ein riesiger Dump transitive Dependencies
 
 4. **Suchbarkeit zählt.** Ein Graph-Query plus Quellcodeausschnitt ist oft
-   wertvoller als tausend Tokens Beschreibung.
+   wertvoller als tausend Tokens Beschreibung
 
 5. **Read-only schützt.** Dependency Source sollte Referenz sein, nicht
-   Patch-Ziel.
+   Patch-Ziel
 
 ---
 

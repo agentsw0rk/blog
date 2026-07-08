@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Spec Driven Development for AI teaser image</title>
+  <desc id="desc">Terminal-style LinkedIn teaser image for an agentsbl0g article about why AI needs Spec Driven Development.</desc>
+  <defs>
+    <linearGradient id="ansiGradient" x1="120" y1="0" x2="1080" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16a66f"/>
+      <stop offset="0.30" stop-color="#0ca6cc"/>
+      <stop offset="0.56" stop-color="#d69a00"/>
+      <stop offset="0.82" stop-color="#0ca6cc"/>
+      <stop offset="1" stop-color="#16a66f"/>
+    </linearGradient>
+    <linearGradient id="softGradient" x1="88" y1="118" x2="1112" y2="548" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16a66f" stop-opacity="0.12"/>
+      <stop offset="0.45" stop-color="#0ca6cc" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#d69a00" stop-opacity="0.12"/>
+    </linearGradient>
+    <pattern id="bitGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <rect width="32" height="32" fill="none"/>
+      <circle cx="8" cy="8" r="2" fill="#0b161d" opacity="0.16"/>
+      <circle cx="24" cy="24" r="2" fill="#0ca6cc" opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="54" y="54" width="1092" height="522" rx="0" fill="#ffffff" stroke="#0b161d" stroke-width="3"/>
+  <line x1="54" y1="118" x2="1146" y2="118" stroke="#0b161d" stroke-width="3"/>
+  <circle cx="86" cy="86" r="8" fill="#0b161d"/>
+  <circle cx="116" cy="86" r="8" fill="#0b161d"/>
+  <circle cx="146" cy="86" r="8" fill="#0b161d"/>
+  <text x="1100" y="93" text-anchor="end" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" font-weight="700" letter-spacing="1">agentsbl0g</text>
+
+  <rect x="126" y="156" width="948" height="328" fill="url(#bitGrid)" opacity="0.28"/>
+
+  <text x="600" y="246" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="92" font-weight="900" letter-spacing="0">SPEC</text>
+  <text x="600" y="340" text-anchor="middle" fill="url(#ansiGradient)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="92" font-weight="900" letter-spacing="0">DRIVEN</text>
+  <text x="600" y="410" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="38" font-weight="900" letter-spacing="2">DEVELOPMENT FOR AI</text>
+
+  <text x="600" y="478" text-anchor="middle" fill="#0b161d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">INTENT · RULES · EXAMPLES · FEEDBACK · CODE</text>
+</svg>

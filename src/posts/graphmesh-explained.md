@@ -126,11 +126,11 @@ Erkenntnisse als Triples in den Graphen.
 
 **Was die Zahl dir sagt:**
 
-- **50–150** für einen 5-Satz-Text: gesund, dichtes Netz.
+- **50–150** für einen 5-Satz-Text: gesund, dichtes Netz
 - **Unter 10:** verdächtig — wahrscheinlich ist einer der KI-Agenten
-  ausgefallen oder hat keine sinnvolle Antwort produziert.
+  ausgefallen oder hat keine sinnvolle Antwort produziert
 - **Mehrere Hundert:** der Text war komplexer als gedacht oder das
-  LLM hat Halluzinationen produziert.
+  LLM hat Halluzinationen produziert
 
 Warum es für die Suche zählt? Wenn du fragst *"Wer leitet das Team?"*,
 wandert die Suche von Knoten zu Knoten entlang der Linien. Sind kaum
@@ -155,7 +155,7 @@ Fünf Triples bedeuten also etwa **2–3 erkannte Themen** im Text.
 
 - **Themenfilter:** "Zeig mir alles zu Klimaforschung."
 - **Cluster-Ansichten:** "Welche Themen tauchen in dieser Sammlung auf?"
-- **Ranking:** Bei mehreren Treffern bevorzugt die Suche thematisch passende.
+- **Ranking:** Bei mehreren Treffern bevorzugt die Suche thematisch passende
 
 Ohne Topic-Triples geht das Dokument in jeder thematischen Suche unter.
 Es ist da — aber niemand findet es.
@@ -179,11 +179,11 @@ Definitionen erzeugen mehrere Einträge (Synonyme, Etiketten).
 **Warum dieser Wert Gold wert ist:**
 
 - **Antwortqualität:** Wenn jemand fragt *"Was ist Permafrost?"*, kann
-  das System die Definition direkt liefern — keine vagen Textfragmente.
+  das System die Definition direkt liefern — keine vagen Textfragmente
 - **Tooltips:** Im Frontend kann ein Hover über den Begriff die Erklärung
-  einblenden.
+  einblenden
 - **Disambiguierung:** Bei mehrdeutigen Begriffen (*"Java"* = Insel oder
-  Programmiersprache?) hilft die Definition beim Auseinanderhalten.
+  Programmiersprache?) hilft die Definition beim Auseinanderhalten
 
 Bei rein narrativen Texten ohne *"X ist Y"*-Sätze ist 0 normal und kein
 Bug — die KI ist konservativ und erfindet keine Definitionen.
@@ -201,9 +201,9 @@ Dokumenten wären hier 3, 5, oder mehr Treffer denkbar.
 
 **Wenn diese Zahl 0 wäre:**
 
-- Der Embedding-Agent hat noch nicht geschrieben (zu langsam, überlastet),
+- Der Embedding-Agent hat noch nicht geschrieben (zu langsam, überlastet)
 - die Vektor-Datenbank-Konfiguration passt nicht zum Embedding-Modell, oder
-- der Ähnlichkeits-Schwellenwert ist zu streng eingestellt.
+- der Ähnlichkeits-Schwellenwert ist zu streng eingestellt
 
 Eine Null hier bedeutet: **die semantische Suche für dieses Dokument
 ist tot**. Synonym-Suche, "finde ähnliches", Volltext-Fallback — alles
@@ -226,9 +226,9 @@ Wenn ein Begriff fehlt, hat ihn keiner der KI-Agenten als wichtig
 eingestuft. Das passiert oft mit:
 
 - kleinen oder schwachen LLM-Modellen (gerade lokal laufende Modelle
-  überspringen Details),
-- Begriffen, die nur beiläufig erwähnt werden,
-- Eigennamen, die das Modell nicht kennt (selten, aber möglich).
+  überspringen Details)
+- Begriffen, die nur beiläufig erwähnt werden
+- Eigennamen, die das Modell nicht kennt (selten, aber möglich)
 
 **Warum kritisch:** Was nicht im Graph steht, **kann die Suche nicht
 finden** — auch wenn es im Originaltext steht. Eine Frage nach *"Hat NASA
@@ -252,9 +252,9 @@ als gewöhnliche Entität behandelt.
 Das ist der Unterschied, der den Nutzererlebnis-Test ausmacht: Eine
 *erkannte* Entität ist gut. Eine *erklärte* Entität ist Gold:
 
-- Bei *"Was ist X?"*-Fragen bekommt der Nutzer eine echte Antwort.
-- Im Frontend kann ein Hover-Tooltip die Bedeutung zeigen.
-- Bei mehrdeutigen Begriffen hilft die Definition beim Auseinanderhalten.
+- Bei *"Was ist X?"*-Fragen bekommt der Nutzer eine echte Antwort
+- Im Frontend kann ein Hover-Tooltip die Bedeutung zeigen
+- Bei mehrdeutigen Begriffen hilft die Definition beim Auseinanderhalten
 
 Bei 0/3 hat der Definition-Agent ein echtes Problem: das Modell ist
 möglicherweise zu schwach, der Prompt liefert ungültiges Format, oder
@@ -274,7 +274,7 @@ climate research team?"* Das System geht so vor:
 2. **Sammelt Nachbarschaft:** Welche Linien gehen von diesen Knoten ab?
    Und von deren Nachbarn? (sog. *Hops*)
 3. **Reicht weiter:** Alle gesammelten Linien werden als Kontext an das
-   Antwort-LLM übergeben.
+   Antwort-LLM übergeben
 
 **51 Linien** heißt: der Retriever hat den Vasquez-Subgraphen plus das
 unmittelbare Umfeld plus Provenance-Daten gezogen.
@@ -325,23 +325,23 @@ moderne Retrieval-System mit LLMs.
 1. **Eine einzelne Metrik lügt.** "Mein RAG-System hat hohe Recall-Werte"
    sagt nichts über Antwortqualität aus. Schau dir mehrere Werte
    gleichzeitig an — Dichte, Themenabdeckung, Definitionsabdeckung,
-   Vektor-Treffer, Retrieval-Kontext.
+   Vektor-Treffer, Retrieval-Kontext
 
 2. **Erwartungen vorher festlegen.** Bevor du den ersten Test laufen
    lässt: Welche Begriffe **müssen** im Graphen sein? Welche Definitionen?
-   Wenn du das nicht vorher weißt, kannst du Erfolg nicht messen.
+   Wenn du das nicht vorher weißt, kannst du Erfolg nicht messen
 
 3. **Mini-Tests schlagen Mega-Tests.** Ein 5-Satz-Dokument, das du in
-   30 Sekunden lesen kannst, ist diagnostischer als ein 50-Seiten-PDF.
-   Du siehst sofort, ob die Pipeline grundlegend funktioniert.
+   30 Sekunden lesen kannst, ist diagnostischer als ein 50-Seiten-PDF
+   Du siehst sofort, ob die Pipeline grundlegend funktioniert
 
 4. **Frag, was der Endnutzer merkt.** Jede Metrik sollte eine konkrete
    Funktion im Frontend stützen. Wenn du eine Zahl nicht in eine
-   Nutzeraktion übersetzen kannst, brauchst du sie wahrscheinlich nicht.
+   Nutzeraktion übersetzen kannst, brauchst du sie wahrscheinlich nicht
 
 5. **Halluzinationen sind das Gegengift zum Idealismus.** Mehr Triples
    ist nicht automatisch besser. Wenn dein LLM aus 5 Sätzen 500 Triples
-   erfindet, hast du ein anderes Problem.
+   erfindet, hast du ein anderes Problem
 
 ---
 

@@ -30,11 +30,11 @@ Und dann kommt die Frage aus dem Nachbar-Team:
 Was antwortest du?
 
 - *"Klar, ich schreib dir eine SPARQL-Query."* — Keiner im Nachbar-Team kennt
-  SPARQL.
+  SPARQL
 - *"Ich bau euch ein REST-Endpoint."* — Drei Tage Arbeit. Pro Abfragevariante
-  ein neuer Endpoint. Dashboard-Team wechselt Anforderungen wöchentlich.
+  ein neuer Endpoint. Dashboard-Team wechselt Anforderungen wöchentlich
 - *"Hier ist der Graph-Dump als JSON, viel Spaß."* — Viel Spaß beim Parsen
-  von 400.000 Tripeln im Browser.
+  von 400.000 Tripeln im Browser
 
 Oder, wenn du **GraphMesh** benutzt:
 
@@ -105,10 +105,10 @@ Und updated sie, wenn sich das Datenmodell ändert. Und schreibt Resolver.
 Du hast also zwei Optionen:
 
 - **RDF pur:** Maximale Flexibilität, aber jede App-Anfrage ist eine kleine
-  Forschungsarbeit.
+  Forschungsarbeit
 - **REST/GraphQL drüber:** Entwicklerfreundlich, aber ein riesiger Übersetzer
   sitzt zwischen Graph und API — und veraltet jedes Mal, wenn sich die
-  Ontologie ändert.
+  Ontologie ändert
 
 Der Clou: **Die Ontologie ist schon ein Schema.** Klassen, Eigenschaften,
 Datentypen, Domain, Range — alles steht drin. Warum nicht direkt eine
@@ -184,8 +184,8 @@ Wertebereich.
 
 In GraphMesh passiert dann Folgendes:
 
-1. Du weist die Ontologie einer **Wissenssammlung** zu (z.B. `it-landschaft`).
-2. Du importierst deine RDF-Daten (die CMDB-Exporte) in die Sammlung.
+1. Du weist die Ontologie einer **Wissenssammlung** zu (z.B. `it-landschaft`)
+2. Du importierst deine RDF-Daten (die CMDB-Exporte) in die Sammlung
 3. GraphMesh erkennt: *"Ah, diese Sammlung hat eine Ontologie, und Daten liegen
    auch schon drin — ich baue jetzt das Schema."*
 
@@ -242,14 +242,14 @@ input TeamFilter {
 **Beachte, was hier automatisch passiert:**
 
 - Jede Klasse bekommt einen Listen-Query (`Anwendung(...)`) und einen
-  Single-Query (`AnwendungById(id)`).
-- Jede DatatypeProperty wird ein typisiertes Feld.
+  Single-Query (`AnwendungById(id)`)
+- Jede DatatypeProperty wird ein typisiertes Feld
 - Jede ObjectProperty wird eine navigierbare Beziehung — mit eigener
-  Paginierung (`limit`, `offset`) direkt am Feld.
+  Paginierung (`limit`, `offset`) direkt am Feld
 - Für jede Klasse entsteht ein `Filter`-Input-Typ mit allen Skalar-Feldern
-  der Klasse.
+  der Klasse
 - Custom-Scalars wie `Date`, `DateTime` und `Long` werden registriert, falls
-  die Ontologie sie braucht.
+  die Ontologie sie braucht
 
 Alles, ohne dass ein Entwickler auch nur eine Zeile GraphQL-Schema getippt
 hat.
@@ -470,26 +470,26 @@ Auch wenn du kein GraphMesh baust: die Prinzipien sind nützlich.
 1. **Das Schema ist schon da, du musst es nur sehen.** Wenn deine Daten
    irgendeine Form von Struktur haben — Ontologie, JSON-Schema, relationale
    Datenbank, Avro, Protobuf — kannst du daraus eine API generieren. Das
-   manuelle Übersetzen per REST-Controller ist oft reine Fleißarbeit.
+   manuelle Übersetzen per REST-Controller ist oft reine Fleißarbeit
 
 2. **Generierte APIs altern mit den Daten.** Statt *"die API ist veraltet,
    weil das Schema sich geändert hat"* hast du *"die API reflektiert, was
-   gerade im Graph ist"*. Das ist ein kompletter Perspektivwechsel.
+   gerade im Graph ist"*. Das ist ein kompletter Perspektivwechsel
 
 3. **Typen sind nicht egal.** `Date` statt `String` klingt wie Detail —
    bis ein Frontend-Bug zwei Zeitzonen verwechselt, weil *"ist ja nur ein
-   String"*. Wenn deine Datenquelle Typen kennt, gib sie weiter.
+   String"*. Wenn deine Datenquelle Typen kennt, gib sie weiter
 
 4. **GraphQLs ObjectProperty-Feldsyntax ist Graph-freundlich.** REST mag
    flache Ressourcen. SPARQL mag Pattern-Matching. GraphQL mag **Objekte mit
    verschachtelten Objekten** — und das ist genau, was ein Wissensgraph
    natürlich ausdrückt. Wenn du Graph-Daten abfragst, ist GraphQL oft
-   näher dran als REST.
+   näher dran als REST
 
 5. **Ein Endpoint pro Sammlung schlägt ein Mega-Endpoint.** Die Versuchung
    ist groß, *eine GraphQL-API für alles* zu bauen. Mit namensraumspezifischen
    Endpoints pro Sammlung bleiben die Typen sauber, die Fehler lokal und
-   die Clients entkoppelt.
+   die Clients entkoppelt
 
 ---
 

@@ -75,22 +75,22 @@ Ein normaler Chatbot darf sich irren. Das ist ärgerlich, aber meistens
 
 Ein Coding-Agent kann dagegen:
 
-- Dateien ändern,
-- Tests starten,
-- Migrationen vorbereiten,
-- Security-Probleme bewerten,
-- Pull Requests erzeugen,
-- Architekturentscheidungen beeinflussen.
+- Dateien ändern
+- Tests starten
+- Migrationen vorbereiten
+- Security-Probleme bewerten
+- Pull Requests erzeugen
+- Architekturentscheidungen beeinflussen
 
 Wenn so ein Agent behauptet, etwas geprüft zu haben, obwohl er es nicht
 geprüft hat, entsteht ein echtes Problem.
 
 Typische Fehler sehen harmlos aus:
 
-- "Die Tests laufen durch", obwohl nur ein Teil getestet wurde.
-- "Der Fehler ist behoben", obwohl nur ein Symptom entfernt wurde.
-- "Diese API existiert", obwohl sie aus altem Trainingswissen stammt.
-- "Die Migration ist vollständig", obwohl Randfälle fehlen.
+- "Die Tests laufen durch", obwohl nur ein Teil getestet wurde
+- "Der Fehler ist behoben", obwohl nur ein Symptom entfernt wurde
+- "Diese API existiert", obwohl sie aus altem Trainingswissen stammt
+- "Die Migration ist vollständig", obwohl Randfälle fehlen
 
 Ein besserer Agent ist deshalb nicht nur kreativer oder schneller. Er ist
 vorsichtiger an den richtigen Stellen. Er sagt eher:
@@ -117,12 +117,12 @@ Dynamic Workflows gehen einen Schritt weiter.
 Statt nur während der laufenden Konversation Subagents zu starten, erstellt
 Claude einen expliziten Workflow. Dieser Workflow beschreibt:
 
-- welche Phasen es gibt,
-- welche Teilaufgaben parallel laufen,
-- welche Ergebnisse gesammelt werden,
-- wann eine nächste Phase startet,
-- wie Ergebnisse überprüft werden,
-- wann der Workflow fertig ist.
+- welche Phasen es gibt
+- welche Teilaufgaben parallel laufen
+- welche Ergebnisse gesammelt werden
+- wann eine nächste Phase startet
+- wie Ergebnisse überprüft werden
+- wann der Workflow fertig ist
 
 Die Orchestrierung liegt damit stärker außerhalb des normalen Chatverlaufs.
 Das ist der Kern des Features.
@@ -156,11 +156,11 @@ Problem.
 
 Normale Subagents sind stark, wenn:
 
-- die Aufgabe noch unklar ist,
-- der Nutzer regelmäßig eingreifen möchte,
-- der Hauptagent aktiv nachsteuern soll,
-- sich der Lösungsweg erst während der Arbeit ergibt,
-- wenige spezialisierte Untersuchungen reichen.
+- die Aufgabe noch unklar ist
+- der Nutzer regelmäßig eingreifen möchte
+- der Hauptagent aktiv nachsteuern soll
+- sich der Lösungsweg erst während der Arbeit ergibt
+- wenige spezialisierte Untersuchungen reichen
 
 Der Vorteil: Claude bleibt als KI-Orchestrator eng im Prozess. Der Hauptagent
 sieht laufend neue Informationen, kann umplanen, Rückfragen stellen oder die
@@ -185,14 +185,14 @@ Der Overhead eines Workflows würde mehr kosten, als er bringt.
 
 Interessant wird das Feature bei Aufgaben wie:
 
-- Codebase-weite Bug-Suchen,
-- Security-Audits über viele Dateien,
-- Migrationen über viele Module,
-- Framework- oder API-Umstellungen,
-- Performance-Audits,
-- Dead-Code-Analysen,
-- große Refactorings mit vielen unabhängigen Teilflächen,
-- Arbeiten, bei denen Ergebnisse unabhängig gegengeprüft werden sollen.
+- Codebase-weite Bug-Suchen
+- Security-Audits über viele Dateien
+- Migrationen über viele Module
+- Framework- oder API-Umstellungen
+- Performance-Audits
+- Dead-Code-Analysen
+- große Refactorings mit vielen unabhängigen Teilflächen
+- Arbeiten, bei denen Ergebnisse unabhängig gegengeprüft werden sollen
 
 Das Muster ist immer ähnlich:
 
@@ -234,12 +234,12 @@ Phase 6: Bericht oder Patch erzeugen
 So ein Workflow kann wiederverwendbar werden. Ein Team könnte zum Beispiel
 Workflows für wiederkehrende Aufgaben bauen:
 
-- Auth-Security-Review,
-- Dependency-Migration,
-- API-Deprecation-Scan,
-- TypeScript-Strictness-Migration,
-- Performance-Smell-Analyse,
-- Test-Coverage-Lücken.
+- Auth-Security-Review
+- Dependency-Migration
+- API-Deprecation-Scan
+- TypeScript-Strictness-Migration
+- Performance-Smell-Analyse
+- Test-Coverage-Lücken
 
 Das ist der eigentlich interessante Teil. Dynamic Workflows sind nicht nur
 "mehr Agenten". Sie machen Agentenarbeit stärker zu einem definierbaren
@@ -257,12 +257,12 @@ Unsicherheit.
 
 Ein guter Dynamic Workflow braucht deshalb:
 
-- eine klare Aufgabe,
-- kleine Teilflächen,
-- strukturierte Outputs,
-- eindeutige Erfolgskriterien,
-- unabhängige Verification,
-- harte Grenzen für Zeit, Tokens und Anzahl der Agenten.
+- eine klare Aufgabe
+- kleine Teilflächen
+- strukturierte Outputs
+- eindeutige Erfolgskriterien
+- unabhängige Verification
+- harte Grenzen für Zeit, Tokens und Anzahl der Agenten
 
 Besonders wichtig ist die Prüfung. Wenn ein Workflow Findings erzeugt, sollte
 ein anderer Schritt diese Findings gezielt widerlegen oder bestätigen.
@@ -288,25 +288,25 @@ Claude-Code-Session. Das ist kein Nebenthema, sondern eine Designgrenze.
 
 Wenn viele Subagents parallel laufen, vervielfachen sich:
 
-- Prompts,
-- Tool-Aufrufe,
-- Datei-Kontext,
-- Zwischenergebnisse,
-- Reviews,
-- Retry-Schleifen,
-- Abschlussberichte.
+- Prompts
+- Tool-Aufrufe
+- Datei-Kontext
+- Zwischenergebnisse
+- Reviews
+- Retry-Schleifen
+- Abschlussberichte
 
 Deshalb sollte ein Workflow nie ohne Budget laufen.
 
 Praktische Grenzen sind:
 
-- maximale Anzahl paralleler Agenten,
-- maximale Dateien pro Phase,
-- maximale Tokens pro Subagent,
-- maximale Iterationen pro Fix-Loop,
-- harte Abbruchbedingungen,
-- kompakte Ergebnis-Schemas,
-- keine unnötigen Volltext-Zusammenfassungen.
+- maximale Anzahl paralleler Agenten
+- maximale Dateien pro Phase
+- maximale Tokens pro Subagent
+- maximale Iterationen pro Fix-Loop
+- harte Abbruchbedingungen
+- kompakte Ergebnis-Schemas
+- keine unnötigen Volltext-Zusammenfassungen
 
 Ein guter Workflow fragt nicht:
 
@@ -329,16 +329,16 @@ Das ist praktisch, weil nicht jede Aufgabe dieselbe Denktiefe braucht.
 
 Für einfache Aufgaben willst du:
 
-- schnelle Antworten,
-- wenig Tokenverbrauch,
-- wenig Prozess.
+- schnelle Antworten
+- wenig Tokenverbrauch
+- wenig Prozess
 
 Für schwierige Aufgaben willst du:
 
-- mehr Reasoning,
-- längeres Prüfen,
-- bessere Planung,
-- eventuell Dynamic Workflows.
+- mehr Reasoning
+- längeres Prüfen
+- bessere Planung
+- eventuell Dynamic Workflows
 
 In Claude Code ist besonders der Modus interessant, der hohes Effort-Level
 mit Workflow-Nutzung kombiniert. Die Idee: Claude entscheidet bei geeigneten
