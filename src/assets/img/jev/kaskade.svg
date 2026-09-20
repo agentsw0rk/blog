@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-labelledby="t d">
+  <title id="t">Die Kaskade mit Jev als Eingangstür</title>
+  <desc id="d">Eine Million Anfragen laufen zuerst durch Jev für rund 0,0004 Dollar pro Fall. Der größte Teil wird danach von deterministischem Code erledigt, ein kleinerer Teil von einem Spezialmodell mit Kontext, und rund zwanzig Prozent gehen an ein Frontier-Modell oder an einen Menschen. Alles über ein Frontier-Modell zu schicken kostet rund 30.400 Dollar, die Kaskade rund 6.480 Dollar.</desc>
+  <style>
+    .bg   { fill: #0b161d; stroke: #24404d; }
+    .box  { fill: #132832; stroke: #386070; }
+    .cy   { fill: #132b35; stroke: #72e4ff; }
+    .ok   { fill: #14312a; stroke: #6ff2b4; }
+    .warn { fill: #2b2519; stroke: #ffd166; }
+    .dim  { fill: #101f29; stroke: #24404d; }
+    rect  { stroke-width: 1; }
+    .l    { fill: #ecf8fb; font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .big  { fill: #ecf8fb; font: 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .m    { fill: #9db6c0; font: 11.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .val  { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .flow { stroke: #386070; stroke-width: 1.4; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1 L9 5 L0 9 z" fill="#386070"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0.5" y="0.5" width="759" height="379" rx="10"/>
+
+  <rect class="box" x="16" y="70" width="150" height="48" rx="6"/>
+  <text class="big" x="91" y="93" text-anchor="middle">1.000.000</text>
+  <text class="m"   x="91" y="110" text-anchor="middle">Anfragen</text>
+  <path class="flow" d="M166 94 H192" marker-end="url(#a)"/>
+
+  <rect class="cy" x="196" y="62" width="180" height="64" rx="8"/>
+  <text class="big" x="286" y="90"  text-anchor="middle" fill="#72e4ff">Jev</text>
+  <text class="m"   x="286" y="108" text-anchor="middle">0,0004 $ · 70–500 ms</text>
+
+  <path class="flow" d="M376 94 C 406 94, 406 32, 434 32" marker-end="url(#a)"/>
+  <path class="flow" d="M376 94 H434" marker-end="url(#a)"/>
+  <path class="flow" d="M376 94 C 406 94, 406 156, 434 156" marker-end="url(#a)"/>
+
+  <rect class="dim"  x="440" y="10"  width="300" height="44" rx="6"/>
+  <text class="l" x="456" y="30">deterministischer Code</text>
+  <text class="m" x="456" y="46">der größte Teil, keine Modellkosten</text>
+
+  <rect class="box"  x="440" y="72"  width="300" height="44" rx="6"/>
+  <text class="l" x="456" y="92">Spezialmodell mit Kontext</text>
+  <text class="m" x="456" y="108">ein kleinerer Teil</text>
+
+  <rect class="warn" x="440" y="134" width="300" height="44" rx="6"/>
+  <text class="l" x="456" y="154" fill="#ffd166">Frontier-Modell oder Mensch</text>
+  <text class="m" x="456" y="170">die harte Minderheit, rund 20 %</text>
+
+  <line x1="16" y1="204" x2="744" y2="204" stroke="#24404d" stroke-width="1"/>
+  <text class="m" x="16" y="230">EINE MILLION SUPPORT-TICKETS</text>
+
+  <text class="m" x="16" y="254" fill="#d0e3e8">alles über ein Frontier-Modell</text>
+  <rect class="warn" x="16" y="262" width="560" height="22" rx="4"/>
+  <text class="val" x="744" y="279" text-anchor="end" fill="#ffd166">≈ 30.400 $</text>
+
+  <text class="m" x="16" y="312" fill="#d0e3e8">Kaskade mit Jev als Eingangstür</text>
+  <rect class="ok" x="16" y="320" width="119" height="22" rx="4"/>
+  <text class="val" x="744" y="337" text-anchor="end" fill="#6ff2b4">≈ 6.480 $</text>
+
+  <text class="m" x="16" y="368">800.000 davon in unter einer halben Sekunde statt in zehn.</text>
+</svg>

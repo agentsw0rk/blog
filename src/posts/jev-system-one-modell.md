@@ -92,15 +92,10 @@ Wahrscheinlichkeiten zurückgibt – statt generierten Text.
 
 Der Unterschied ist nicht die Modellgröße, sondern die Architektur:
 
-```text
-LLM
-  Token -> Token -> Token -> String
-  dein Code: parsen, validieren, retryen
-
-Jev
-  Zustand + alle Fragen -> ein paralleler Durchlauf
-  Antwort: bereits gültige, typisierte Werte
-```
+<figure class="diagram">
+  <img src="/assets/img/jev/token-vs-parallel.svg" alt="Oben der LLM-Pfad mit Token-für-Token-Ausgabe, Parsing, Validierung und Retry. Unten der Jev-Pfad mit einem parallelen Durchlauf und direkt gültigen, typisierten Werten." width="760" height="280" loading="lazy">
+  <figcaption>Der Unterschied ist nicht die Modellgröße, sondern der Weg zur Antwort.</figcaption>
+</figure>
 
 Bei einem LLM hängt die Latenz an der Länge der Ausgabe, und das Ergebnis ist
 ein String, der alles Mögliche sein kann. Jev nimmt den Zustand und alle
@@ -142,6 +137,11 @@ von Fragen. Es gibt genau drei Fragetypen und keine weiteren:
 - **Score** bewertet den Zustand gegen zwei bis zehn geordnete Stufen, die du
   in Worten beschreibst.
 - **Noul** beantwortet eine Ja-Nein-Frage mit der Wahrscheinlichkeit für Ja.
+
+<figure class="diagram">
+  <img src="/assets/img/jev/fragetypen.svg" alt="Drei Karten: Choice wählt eine von bis zu 255 Optionen, Score liefert eine Position auf einer Skala wie 1.035, Noul liefert eine Wahrscheinlichkeit wie 0.999." width="760" height="286" loading="lazy">
+  <figcaption>Drei Fragetypen, und keine weiteren. Der Antwortraum steht vor der Frage fest.</figcaption>
+</figure>
 
 Ein Support-Ticket, das in einem Aufruf triagiert wird:
 
@@ -303,6 +303,11 @@ elif action.choice == "approve_transfer":
         ask_user_to_confirm(account_id)
 ```
 
+<figure class="diagram">
+  <img src="/assets/img/jev/confidence-gating.svg" alt="Zwei Aktionen auf derselben Confidence-Achse: check_balance wird ab 0,5 direkt ausgeführt, approve_transfer erst ab 0,85, dazwischen wird der Nutzer um Bestätigung gebeten." width="760" height="320" loading="lazy">
+  <figcaption>Dieselbe Confidence, zwei unterschiedliche Hürden. Der Unterschied ist der Schaden im Fehlerfall.</figcaption>
+</figure>
+
 Wichtig ist, was hier fehlt: ein einziger globaler Schwellwert.
 
 Der falsche Screen kostet den Nutzer drei Sekunden. Die falsche Überweisung
@@ -358,13 +363,10 @@ Setzt man beides zusammen, ist die interessante Architektur nicht "ersetze
 dein LLM", sondern eine Kaskade – mit Jev als schneller, billiger,
 kalibrierter Eingangstür, die entscheidet, was als Nächstes passiert.
 
-```text
-Anfrage
-  -> Jev (70-500 ms, ~0,0004 $)
-       -> deterministischer Code        (der größte Teil)
-       -> Spezialmodell mit Kontext     (ein kleinerer Teil)
-       -> Frontier-Modell oder Mensch   (die harte Minderheit)
-```
+<figure class="diagram">
+  <img src="/assets/img/jev/kaskade.svg" alt="Eine Million Anfragen laufen durch Jev und werden auf deterministischen Code, ein Spezialmodell und ein Frontier-Modell oder einen Menschen verteilt. Darunter der Kostenvergleich: rund 30.400 Dollar gegen rund 6.480 Dollar." width="760" height="380" loading="lazy">
+  <figcaption>Jev ersetzt das Frontier-Modell nicht. Es entscheidet, welche Anfrage eines verdient.</figcaption>
+</figure>
 
 Die meisten Anfragen erledigt gewöhnlicher Code, weil Jev sie in etwas
 Deterministisches einsortiert hat. Ein Teil geht an ein Spezialmodell mit

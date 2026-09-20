@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="t d">
+  <title id="t">Confidence-Schwellwerte je nach Konsequenz</title>
+  <desc id="d">Zwei Aktionen auf derselben Confidence-Achse von 0 bis 1. Die lesende Aktion check_balance wird ab einer Confidence von 0,5 direkt ausgeführt. Die riskante Aktion approve_transfer geht unter 0,5 an einen Menschen, zwischen 0,5 und 0,85 an eine Nutzerbestätigung und wird erst über 0,85 automatisch ausgeführt.</desc>
+  <style>
+    .bg   { fill: #0b161d; stroke: #24404d; }
+    .dim  { fill: #101f29; stroke: #24404d; }
+    .ok   { fill: #14312a; stroke: #6ff2b4; }
+    .warn { fill: #2b2519; stroke: #ffd166; }
+    rect  { stroke-width: 1; }
+    .ax   { fill: #9db6c0; font: 11.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .lane { fill: #9db6c0; font: 600 10.5px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: .14em; }
+    .act  { fill: #ecf8fb; font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sub  { fill: #9db6c0; font: 11.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .seg  { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .note { fill: #d0e3e8; font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .guide{ stroke: #386070; stroke-width: 1; stroke-dasharray: 4 4; }
+  </style>
+
+  <rect class="bg" x="0.5" y="0.5" width="759" height="319" rx="10"/>
+
+  <text class="lane" x="90" y="30">CONFIDENCE</text>
+  <text class="ax" x="90"  y="52" text-anchor="middle">0.0</text>
+  <text class="ax" x="405" y="52" text-anchor="middle">0.5</text>
+  <text class="ax" x="626" y="52" text-anchor="middle">0.85</text>
+  <text class="ax" x="720" y="52" text-anchor="middle">1.0</text>
+  <line class="guide" x1="405" y1="60" x2="405" y2="248"/>
+  <line class="guide" x1="626" y1="60" x2="626" y2="248"/>
+
+  <text class="act" x="90" y="86">check_balance</text>
+  <text class="sub" x="230" y="86">lesend und umkehrbar</text>
+  <rect class="dim" x="90"  y="96" width="315" height="40" rx="6"/>
+  <text class="seg" x="247" y="121" text-anchor="middle" fill="#9db6c0">an Menschen</text>
+  <rect class="ok"  x="405" y="96" width="315" height="40" rx="6"/>
+  <text class="seg" x="562" y="121" text-anchor="middle" fill="#6ff2b4">direkt anzeigen</text>
+
+  <text class="act" x="90" y="178">approve_transfer</text>
+  <text class="sub" x="256" y="178">kostet echtes Geld</text>
+  <rect class="dim"  x="90"  y="188" width="315" height="40" rx="6"/>
+  <text class="seg" x="247" y="213" text-anchor="middle" fill="#9db6c0">an Menschen</text>
+  <rect class="warn" x="405" y="188" width="221" height="40" rx="6"/>
+  <text class="seg" x="515" y="213" text-anchor="middle" fill="#ffd166">bestätigen lassen</text>
+  <rect class="ok"   x="626" y="188" width="94"  height="40" rx="6"/>
+  <text class="seg" x="673" y="213" text-anchor="middle" fill="#6ff2b4">ausführen</text>
+
+  <line x1="90" y1="266" x2="720" y2="266" stroke="#24404d" stroke-width="1"/>
+  <text class="note" x="90" y="292">Die Hürde, ohne Menschen zu handeln, steigt mit den Konsequenzen.</text>
+  <text class="note" x="90" y="310" fill="#72e4ff">Ein einziger globaler Schwellwert wäre der Fehler.</text>
+</svg>

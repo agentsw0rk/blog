@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-labelledby="t d">
+  <title id="t">Der LLM-Pfad gegen den Jev-Pfad</title>
+  <desc id="d">Oben: Ein Sprachmodell erzeugt aus einem Prompt Token für Token einen String, der geparst und validiert werden muss und bei ungültigem Format einen Retry auslöst. Unten: Jev nimmt Zustand und alle Fragen gleichzeitig entgegen, wertet sie in einem parallelen Durchlauf aus und liefert direkt typisierte Werte.</desc>
+  <style>
+    .bg   { fill: #0b161d; stroke: #24404d; }
+    .box  { fill: #132832; stroke: #386070; }
+    .dim  { fill: #101f29; stroke: #24404d; }
+    .ok   { fill: #14312a; stroke: #6ff2b4; }
+    .cy   { fill: #132b35; stroke: #72e4ff; }
+    rect  { stroke-width: 1; }
+    .l    { fill: #ecf8fb; font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .m    { fill: #9db6c0; font: 11.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .g    { fill: #6ff2b4; font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .lane { fill: #9db6c0; font: 600 10.5px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; letter-spacing: .14em; }
+    .flow { stroke: #386070; stroke-width: 1.4; fill: none; }
+    .retry{ stroke: #ffd166; stroke-width: 1.2; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1 L9 5 L0 9 z" fill="#386070"/>
+    </marker>
+    <marker id="ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1 L9 5 L0 9 z" fill="#ffd166"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0.5" y="0.5" width="759" height="279" rx="10"/>
+
+  <text class="lane" x="24" y="38">SPRACHMODELL</text>
+  <rect class="box" x="24"  y="56" width="86"  height="34" rx="6"/>
+  <text class="l" x="67"  y="78" text-anchor="middle">Prompt</text>
+  <path class="flow" d="M110 73 H126" marker-end="url(#a)"/>
+  <rect class="dim" x="130" y="56" width="54" height="34" rx="6"/>
+  <text class="m" x="157" y="77" text-anchor="middle">Token</text>
+  <path class="flow" d="M184 73 H190" marker-end="url(#a)"/>
+  <rect class="dim" x="192" y="56" width="54" height="34" rx="6"/>
+  <text class="m" x="219" y="77" text-anchor="middle">Token</text>
+  <path class="flow" d="M246 73 H252" marker-end="url(#a)"/>
+  <rect class="dim" x="254" y="56" width="54" height="34" rx="6"/>
+  <text class="m" x="281" y="77" text-anchor="middle">Token</text>
+  <text class="m" x="318" y="78">…</text>
+  <path class="flow" d="M330 73 H340" marker-end="url(#a)"/>
+  <rect class="box" x="344" y="56" width="92"  height="34" rx="6"/>
+  <text class="l" x="390" y="78" text-anchor="middle">String</text>
+  <path class="flow" d="M436 73 H452" marker-end="url(#a)"/>
+  <rect class="box" x="456" y="56" width="140" height="34" rx="6"/>
+  <text class="l" x="526" y="78" text-anchor="middle">parse · validate</text>
+  <path class="flow" d="M596 73 H612" marker-end="url(#a)"/>
+  <rect class="box" x="616" y="56" width="124" height="34" rx="6"/>
+  <text class="l" x="678" y="78" text-anchor="middle">Entscheidung</text>
+  <text class="m" x="219" y="108" text-anchor="middle">Token für Token · Latenz wächst mit der Länge</text>
+
+  <path class="retry" d="M526 90 V128 H67 V98" marker-end="url(#ay)"/>
+  <text class="m" x="296" y="146" text-anchor="middle" fill="#ffd166">Retry bei ungültigem Format</text>
+
+  <text class="lane" x="24" y="178">SYSTEM-ONE-MODELL · JEV</text>
+  <rect class="cy" x="24"  y="196" width="180" height="34" rx="6"/>
+  <text class="l" x="114" y="218" text-anchor="middle">Zustand + n Fragen</text>
+  <path class="flow" d="M204 213 H230" marker-end="url(#a)"/>
+  <rect class="cy" x="234" y="196" width="230" height="34" rx="6"/>
+  <text class="l" x="349" y="218" text-anchor="middle">ein paralleler Durchlauf</text>
+  <path class="flow" d="M464 213 H490" marker-end="url(#a)"/>
+  <rect class="ok" x="494" y="196" width="246" height="34" rx="6"/>
+  <text class="g" x="617" y="218" text-anchor="middle">typisierte Werte, gültig</text>
+  <text class="m" x="114" y="248" text-anchor="middle">alle Fragen gleichzeitig</text>
+  <text class="m" x="349" y="248" text-anchor="middle">70–500 ms</text>
+  <text class="m" x="617" y="248" text-anchor="middle">kein Parsen, kein Retry</text>
+</svg>

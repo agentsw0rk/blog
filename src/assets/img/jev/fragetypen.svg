@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 286" role="img" aria-labelledby="t d">
+  <title id="t">Die drei Fragetypen von Jev</title>
+  <desc id="d">Choice wählt eine Option aus einer definierten Menge von bis zu 255 Optionen. Score bewertet gegen zwei bis zehn geordnete Stufen und liefert eine Position auf der Skala, etwa 1.035. Noul beantwortet eine Ja-Nein-Frage mit einer Wahrscheinlichkeit, etwa 0.999.</desc>
+  <style>
+    .bg    { fill: #0b161d; stroke: #24404d; }
+    .card  { fill: #101f29; stroke: #24404d; }
+    .chip  { fill: #132832; stroke: #386070; }
+    .pick  { fill: #14312a; stroke: #6ff2b4; }
+    .track { fill: #071016; stroke: #24404d; }
+    rect   { stroke-width: 1; }
+    .h     { font: 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .s     { fill: #9db6c0; font: 11.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .l     { fill: #ecf8fb; font: 12.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .d     { fill: #9db6c0; font: 12.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .out   { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sep   { stroke: #24404d; stroke-width: 1; }
+    .tick  { stroke: #386070; stroke-width: 1; }
+  </style>
+
+  <rect class="bg" x="0.5" y="0.5" width="759" height="285" rx="10"/>
+
+  <!-- Choice -->
+  <rect class="card" x="12" y="12" width="228" height="262" rx="8"/>
+  <rect x="12" y="12" width="228" height="3" rx="1.5" fill="#72e4ff" stroke="none"/>
+  <text class="h" x="32" y="46" fill="#72e4ff">Choice</text>
+  <text class="s" x="32" y="66">eine Option aus bis zu 255</text>
+  <rect class="chip" x="32" y="86"  width="188" height="30" rx="6"/>
+  <text class="d" x="48" y="105">billing</text>
+  <rect class="pick" x="32" y="124" width="188" height="30" rx="6"/>
+  <text class="l" x="48" y="143" fill="#6ff2b4">technical</text>
+  <rect class="chip" x="32" y="162" width="188" height="30" rx="6"/>
+  <text class="d" x="48" y="181">sales</text>
+  <line class="sep" x1="32" y1="216" x2="220" y2="216"/>
+  <text class="out" x="32" y="240" fill="#6ff2b4">→ "technical"</text>
+  <text class="s" x="32" y="258">confidence 0.97</text>
+
+  <!-- Score -->
+  <rect class="card" x="266" y="12" width="228" height="262" rx="8"/>
+  <rect x="266" y="12" width="228" height="3" rx="1.5" fill="#ffd166" stroke="none"/>
+  <text class="h" x="286" y="46" fill="#ffd166">Score</text>
+  <text class="s" x="286" y="66">2 bis 10 geordnete Stufen</text>
+  <text class="out" x="383" y="124" text-anchor="middle" fill="#ffd166">1.035</text>
+  <path d="M383 132 l6 10 h-12 z" fill="#ffd166"/>
+  <line class="tick" x1="300" y1="150" x2="460" y2="150"/>
+  <line class="tick" x1="300" y1="144" x2="300" y2="156"/>
+  <line class="tick" x1="380" y1="144" x2="380" y2="156"/>
+  <line class="tick" x1="460" y1="144" x2="460" y2="156"/>
+  <text class="s" x="300" y="174" text-anchor="middle">ruhig</text>
+  <text class="s" x="380" y="174" text-anchor="middle">genervt</text>
+  <text class="s" x="460" y="174" text-anchor="middle">wütend</text>
+  <line class="sep" x1="286" y1="216" x2="474" y2="216"/>
+  <text class="out" x="286" y="240" fill="#ffd166">→ 1.035</text>
+  <text class="s" x="286" y="258">Position, kein Label</text>
+
+  <!-- Noul -->
+  <rect class="card" x="520" y="12" width="228" height="262" rx="8"/>
+  <rect x="520" y="12" width="228" height="3" rx="1.5" fill="#6ff2b4" stroke="none"/>
+  <text class="h" x="540" y="46" fill="#6ff2b4">Noul</text>
+  <text class="s" x="540" y="66">Ja oder Nein, als P(ja)</text>
+  <text class="out" x="540" y="124" fill="#6ff2b4">0.999</text>
+  <rect class="track" x="540" y="136" width="188" height="26" rx="5"/>
+  <rect x="540.5" y="136.5" width="187" height="25" rx="5" fill="#14312a" stroke="#6ff2b4"/>
+  <text class="s" x="540" y="182">0.0</text>
+  <text class="s" x="728" y="182" text-anchor="end">1.0</text>
+  <line class="sep" x1="540" y1="216" x2="728" y2="216"/>
+  <text class="out" x="540" y="240" fill="#6ff2b4">→ 0.999</text>
+  <text class="s" x="540" y="258">sehr sicher: ja</text>
+</svg>
